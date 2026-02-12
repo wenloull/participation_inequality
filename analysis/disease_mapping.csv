@@ -1,0 +1,378 @@
+﻿REI ID,REI Name,Parent ID,Parent Name,Level,TYPE
+294,All causes,294,All causes,0,CAUSE
+295,"Communicable, maternal, neonatal, and nutritional diseases",294,All causes,1,CAUSE
+955,HIV/AIDS and sexually transmitted infections,295,"Communicable, maternal, neonatal, and nutritional diseases",2,CAUSE
+298,HIV/AIDS,955,HIV/AIDS and sexually transmitted infections,3,CAUSE
+948,HIV/AIDS - Drug-susceptible Tuberculosis,298,HIV/AIDS,4,CAUSE
+949,HIV/AIDS - Multidrug-resistant Tuberculosis without extensive drug resistance,298,HIV/AIDS,4,CAUSE
+950,HIV/AIDS - Extensively drug-resistant Tuberculosis,298,HIV/AIDS,4,CAUSE
+300,HIV/AIDS resulting in other diseases,298,HIV/AIDS,4,CAUSE
+393,Sexually transmitted infections excluding HIV,955,HIV/AIDS and sexually transmitted infections,3,CAUSE
+394,Syphilis,393,Sexually transmitted infections excluding HIV,4,CAUSE
+395,Chlamydial infection,393,Sexually transmitted infections excluding HIV,4,CAUSE
+396,Gonococcal infection,393,Sexually transmitted infections excluding HIV,4,CAUSE
+397,Trichomoniasis,393,Sexually transmitted infections excluding HIV,4,CAUSE
+398,Genital herpes,393,Sexually transmitted infections excluding HIV,4,CAUSE
+399,Other sexually transmitted infections,393,Sexually transmitted infections excluding HIV,4,CAUSE
+956,Respiratory infections and tuberculosis,295,"Communicable, maternal, neonatal, and nutritional diseases",2,CAUSE
+297,Tuberculosis,956,Respiratory infections and tuberculosis,3,CAUSE
+954,Latent tuberculosis infection,297,Tuberculosis,4,CAUSE
+934,Drug-susceptible tuberculosis,297,Tuberculosis,4,CAUSE
+946,Multidrug-resistant tuberculosis without extensive drug resistance,297,Tuberculosis,4,CAUSE
+947,Extensively drug-resistant tuberculosis,297,Tuberculosis,4,CAUSE
+322,Lower respiratory infections,956,Respiratory infections and tuberculosis,3,CAUSE
+328,Upper respiratory infections,956,Respiratory infections and tuberculosis,3,CAUSE
+329,Otitis media,956,Respiratory infections and tuberculosis,3,CAUSE
+1048,COVID-19,956,Respiratory infections and tuberculosis,3,CAUSE
+957,Enteric infections,295,"Communicable, maternal, neonatal, and nutritional diseases",2,CAUSE
+302,Diarrheal diseases,957,Enteric infections,3,CAUSE
+958,Typhoid and paratyphoid,957,Enteric infections,3,CAUSE
+319,Typhoid fever,958,Typhoid and paratyphoid,4,CAUSE
+320,Paratyphoid fever,958,Typhoid and paratyphoid,4,CAUSE
+959,Invasive Non-typhoidal Salmonella (iNTS),957,Enteric infections,3,CAUSE
+321,Other intestinal infectious diseases,957,Enteric infections,3,CAUSE
+344,Neglected tropical diseases and malaria,295,"Communicable, maternal, neonatal, and nutritional diseases",2,CAUSE
+345,Malaria,344,Neglected tropical diseases and malaria,3,CAUSE
+346,Chagas disease,344,Neglected tropical diseases and malaria,3,CAUSE
+347,Leishmaniasis,344,Neglected tropical diseases and malaria,3,CAUSE
+348,Visceral leishmaniasis,347,Leishmaniasis,4,CAUSE
+349,Cutaneous and mucocutaneous leishmaniasis,347,Leishmaniasis,4,CAUSE
+350,African trypanosomiasis,344,Neglected tropical diseases and malaria,3,CAUSE
+351,Schistosomiasis,344,Neglected tropical diseases and malaria,3,CAUSE
+352,Cysticercosis,344,Neglected tropical diseases and malaria,3,CAUSE
+353,Cystic echinococcosis,344,Neglected tropical diseases and malaria,3,CAUSE
+354,Lymphatic filariasis,344,Neglected tropical diseases and malaria,3,CAUSE
+355,Onchocerciasis,344,Neglected tropical diseases and malaria,3,CAUSE
+356,Trachoma,344,Neglected tropical diseases and malaria,3,CAUSE
+357,Dengue,344,Neglected tropical diseases and malaria,3,CAUSE
+358,Yellow fever,344,Neglected tropical diseases and malaria,3,CAUSE
+359,Rabies,344,Neglected tropical diseases and malaria,3,CAUSE
+360,Intestinal nematode infections,344,Neglected tropical diseases and malaria,3,CAUSE
+361,Ascariasis,360,Intestinal nematode infections,4,CAUSE
+362,Trichuriasis,360,Intestinal nematode infections,4,CAUSE
+363,Hookworm disease,360,Intestinal nematode infections,4,CAUSE
+364,Food-borne trematodiases,344,Neglected tropical diseases and malaria,3,CAUSE
+405,Leprosy,344,Neglected tropical diseases and malaria,3,CAUSE
+843,Ebola,344,Neglected tropical diseases and malaria,3,CAUSE
+935,Zika virus,344,Neglected tropical diseases and malaria,3,CAUSE
+936,Guinea worm disease,344,Neglected tropical diseases and malaria,3,CAUSE
+365,Other neglected tropical diseases,344,Neglected tropical diseases and malaria,3,CAUSE
+961,Other infectious diseases,295,"Communicable, maternal, neonatal, and nutritional diseases",2,CAUSE
+332,Meningitis,961,Other infectious diseases,3,CAUSE
+337,Encephalitis,961,Other infectious diseases,3,CAUSE
+338,Diphtheria,961,Other infectious diseases,3,CAUSE
+339,Pertussis,961,Other infectious diseases,3,CAUSE
+340,Tetanus,961,Other infectious diseases,3,CAUSE
+341,Measles,961,Other infectious diseases,3,CAUSE
+342,Varicella and herpes zoster,961,Other infectious diseases,3,CAUSE
+400,Acute hepatitis,961,Other infectious diseases,3,CAUSE
+401,Acute hepatitis A,400,Acute hepatitis,4,CAUSE
+402,Acute hepatitis B,400,Acute hepatitis,4,CAUSE
+403,Acute hepatitis C,400,Acute hepatitis,4,CAUSE
+404,Acute hepatitis E,400,Acute hepatitis,4,CAUSE
+408,Other unspecified infectious diseases,961,Other infectious diseases,3,CAUSE
+962,Maternal and neonatal disorders,295,"Communicable, maternal, neonatal, and nutritional diseases",2,CAUSE
+366,Maternal disorders,962,Maternal and neonatal disorders,3,CAUSE
+367,Maternal hemorrhage,366,Maternal disorders,4,CAUSE
+368,Maternal sepsis and other maternal infections,366,Maternal disorders,4,CAUSE
+369,Maternal hypertensive disorders,366,Maternal disorders,4,CAUSE
+370,Maternal obstructed labor and uterine rupture,366,Maternal disorders,4,CAUSE
+995,Maternal abortion and miscarriage,366,Maternal disorders,4,CAUSE
+374,Ectopic pregnancy,366,Maternal disorders,4,CAUSE
+375,Indirect maternal deaths,366,Maternal disorders,4,CAUSE
+376,Late maternal deaths,366,Maternal disorders,4,CAUSE
+741,Maternal deaths aggravated by HIV/AIDS,366,Maternal disorders,4,CAUSE
+379,Other direct maternal disorders,366,Maternal disorders,4,CAUSE
+380,Neonatal disorders,962,Maternal and neonatal disorders,3,CAUSE
+381,Neonatal preterm birth,380,Neonatal disorders,4,CAUSE
+382,Neonatal encephalopathy due to birth asphyxia and trauma,380,Neonatal disorders,4,CAUSE
+383,Neonatal sepsis and other neonatal infections,380,Neonatal disorders,4,CAUSE
+384,Hemolytic disease and other neonatal jaundice,380,Neonatal disorders,4,CAUSE
+385,Other neonatal disorders,380,Neonatal disorders,4,CAUSE
+386,Nutritional deficiencies,295,"Communicable, maternal, neonatal, and nutritional diseases",2,CAUSE
+387,Protein-energy malnutrition,386,Nutritional deficiencies,3,CAUSE
+388,Iodine deficiency,386,Nutritional deficiencies,3,CAUSE
+389,Vitamin A deficiency,386,Nutritional deficiencies,3,CAUSE
+390,Dietary iron deficiency,386,Nutritional deficiencies,3,CAUSE
+391,Other nutritional deficiencies,386,Nutritional deficiencies,3,CAUSE
+409,Non-communicable diseases,294,All causes,1,CAUSE
+410,Neoplasms,409,Non-communicable diseases,2,CAUSE
+444,Lip and oral cavity cancer,410,Neoplasms,3,CAUSE
+447,Nasopharynx cancer,410,Neoplasms,3,CAUSE
+450,Other pharynx cancer,410,Neoplasms,3,CAUSE
+411,Esophageal cancer,410,Neoplasms,3,CAUSE
+414,Stomach cancer,410,Neoplasms,3,CAUSE
+441,Colon and rectum cancer,410,Neoplasms,3,CAUSE
+417,Liver cancer,410,Neoplasms,3,CAUSE
+418,Liver cancer due to hepatitis B,417,Liver cancer,4,CAUSE
+419,Liver cancer due to hepatitis C,417,Liver cancer,4,CAUSE
+420,Liver cancer due to alcohol use,417,Liver cancer,4,CAUSE
+996,Liver cancer due to NASH,417,Liver cancer,4,CAUSE
+1005,Hepatoblastoma,417,Liver cancer,4,CAUSE
+421,Liver cancer due to other causes,417,Liver cancer,4,CAUSE
+453,Gallbladder and biliary tract cancer,410,Neoplasms,3,CAUSE
+456,Pancreatic cancer,410,Neoplasms,3,CAUSE
+423,Larynx cancer,410,Neoplasms,3,CAUSE
+426,"Tracheal, bronchus, and lung cancer",410,Neoplasms,3,CAUSE
+459,Malignant skin melanoma,410,Neoplasms,3,CAUSE
+462,Non-melanoma skin cancer,410,Neoplasms,3,CAUSE
+849,Non-melanoma skin cancer (squamous-cell carcinoma),462,Non-melanoma skin cancer,4,CAUSE
+850,Non-melanoma skin cancer (basal-cell carcinoma),462,Non-melanoma skin cancer,4,CAUSE
+1011,Soft tissue and other extraosseous sarcomas,410,Neoplasms,3,CAUSE
+1012,Malignant neoplasm of bone and articular cartilage,410,Neoplasms,3,CAUSE
+429,Breast cancer,410,Neoplasms,3,CAUSE
+432,Cervical cancer,410,Neoplasms,3,CAUSE
+435,Uterine cancer,410,Neoplasms,3,CAUSE
+465,Ovarian cancer,410,Neoplasms,3,CAUSE
+438,Prostate cancer,410,Neoplasms,3,CAUSE
+468,Testicular cancer,410,Neoplasms,3,CAUSE
+471,Kidney cancer,410,Neoplasms,3,CAUSE
+474,Bladder cancer,410,Neoplasms,3,CAUSE
+477,Brain and central nervous system cancer,410,Neoplasms,3,CAUSE
+1008,Eye cancer,410,Neoplasms,3,CAUSE
+1009,Retinoblastoma,1008,Eye cancer,4,CAUSE
+1010,Other eye cancers,1008,Eye cancer,4,CAUSE
+1013,Neuroblastoma and other peripheral nervous cell tumors,410,Neoplasms,3,CAUSE
+480,Thyroid cancer,410,Neoplasms,3,CAUSE
+483,Mesothelioma,410,Neoplasms,3,CAUSE
+484,Hodgkin lymphoma,410,Neoplasms,3,CAUSE
+485,Non-Hodgkin lymphoma,410,Neoplasms,3,CAUSE
+1006,Burkitt lymphoma,485,Non-Hodgkin lymphoma,4,CAUSE
+1007,Other non-Hodgkin lymphoma,485,Non-Hodgkin lymphoma,4,CAUSE
+486,Multiple myeloma,410,Neoplasms,3,CAUSE
+487,Leukemia,410,Neoplasms,3,CAUSE
+845,Acute lymphoid leukemia,487,Leukemia,4,CAUSE
+846,Chronic lymphoid leukemia,487,Leukemia,4,CAUSE
+847,Acute myeloid leukemia,487,Leukemia,4,CAUSE
+848,Chronic myeloid leukemia,487,Leukemia,4,CAUSE
+943,Other leukemia,487,Leukemia,4,CAUSE
+489,Other malignant neoplasms,410,Neoplasms,3,CAUSE
+490,Other neoplasms,410,Neoplasms,3,CAUSE
+964,"Myelodysplastic, myeloproliferative, and other hematopoietic neoplasms",490,Other neoplasms,4,CAUSE
+965,Benign and in situ intestinal neoplasms,490,Other neoplasms,4,CAUSE
+966,Benign and in situ cervical and uterine neoplasms,490,Other neoplasms,4,CAUSE
+967,Other benign and in situ neoplasms,490,Other neoplasms,4,CAUSE
+491,Cardiovascular diseases,409,Non-communicable diseases,2,CAUSE
+492,Rheumatic heart disease,491,Cardiovascular diseases,3,CAUSE
+493,Ischemic heart disease,491,Cardiovascular diseases,3,CAUSE
+494,Stroke,491,Cardiovascular diseases,3,CAUSE
+495,Ischemic stroke,494,Stroke,4,CAUSE
+496,Intracerebral hemorrhage,494,Stroke,4,CAUSE
+497,Subarachnoid hemorrhage,494,Stroke,4,CAUSE
+498,Hypertensive heart disease,491,Cardiovascular diseases,3,CAUSE
+504,Non-rheumatic valvular heart disease,491,Cardiovascular diseases,3,CAUSE
+968,Non-rheumatic calcific aortic valve disease,504,Non-rheumatic valvular heart disease,4,CAUSE
+969,Non-rheumatic degenerative mitral valve disease,504,Non-rheumatic valvular heart disease,4,CAUSE
+970,Other non-rheumatic valve diseases,504,Non-rheumatic valvular heart disease,4,CAUSE
+499,Cardiomyopathy and myocarditis,491,Cardiovascular diseases,3,CAUSE
+942,Myocarditis,499,Cardiomyopathy and myocarditis,4,CAUSE
+938,Alcoholic cardiomyopathy,499,Cardiomyopathy and myocarditis,4,CAUSE
+944,Other cardiomyopathy,499,Cardiomyopathy and myocarditis,4,CAUSE
+1004,Pulmonary Arterial Hypertension,491,Cardiovascular diseases,3,CAUSE
+500,Atrial fibrillation and flutter,491,Cardiovascular diseases,3,CAUSE
+501,Aortic aneurysm,491,Cardiovascular diseases,3,CAUSE
+502,Lower extremity peripheral arterial disease,491,Cardiovascular diseases,3,CAUSE
+503,Endocarditis,491,Cardiovascular diseases,3,CAUSE
+507,Other cardiovascular and circulatory diseases,491,Cardiovascular diseases,3,CAUSE
+508,Chronic respiratory diseases,409,Non-communicable diseases,2,CAUSE
+509,Chronic obstructive pulmonary disease,508,Chronic respiratory diseases,3,CAUSE
+510,Pneumoconiosis,508,Chronic respiratory diseases,3,CAUSE
+511,Silicosis,510,Pneumoconiosis,4,CAUSE
+512,Asbestosis,510,Pneumoconiosis,4,CAUSE
+513,Coal workers pneumoconiosis,510,Pneumoconiosis,4,CAUSE
+514,Other pneumoconiosis,510,Pneumoconiosis,4,CAUSE
+515,Asthma,508,Chronic respiratory diseases,3,CAUSE
+516,Interstitial lung disease and pulmonary sarcoidosis,508,Chronic respiratory diseases,3,CAUSE
+520,Other chronic respiratory diseases,508,Chronic respiratory diseases,3,CAUSE
+526,Digestive diseases,409,Non-communicable diseases,2,CAUSE
+521,Cirrhosis and other chronic liver diseases,526,Digestive diseases,3,CAUSE
+522,Chronic hepatitis B including cirrhosis,521,Cirrhosis and other chronic liver diseases,4,CAUSE
+523,Chronic hepatitis C including cirrhosis,521,Cirrhosis and other chronic liver diseases,4,CAUSE
+524,Cirrhosis due to alcohol,521,Cirrhosis and other chronic liver diseases,4,CAUSE
+971,Nonalcoholic fatty liver disease including cirrhosis,521,Cirrhosis and other chronic liver diseases,4,CAUSE
+525,Cirrhosis due to other causes,521,Cirrhosis and other chronic liver diseases,4,CAUSE
+992,Upper digestive system diseases,526,Digestive diseases,3,CAUSE
+527,Peptic ulcer disease,992,Upper digestive system diseases,4,CAUSE
+528,Gastritis and duodenitis,992,Upper digestive system diseases,4,CAUSE
+536,Gastroesophageal reflux disease,992,Upper digestive system diseases,4,CAUSE
+529,Appendicitis,526,Digestive diseases,3,CAUSE
+530,Paralytic ileus and intestinal obstruction,526,Digestive diseases,3,CAUSE
+531,"Inguinal, femoral, and abdominal hernia",526,Digestive diseases,3,CAUSE
+532,Inflammatory bowel disease,526,Digestive diseases,3,CAUSE
+533,Vascular intestinal disorders,526,Digestive diseases,3,CAUSE
+534,Gallbladder and biliary diseases,526,Digestive diseases,3,CAUSE
+535,Pancreatitis,526,Digestive diseases,3,CAUSE
+541,Other digestive diseases,526,Digestive diseases,3,CAUSE
+542,Neurological disorders,409,Non-communicable diseases,2,CAUSE
+543,Alzheimer's disease and other dementias,542,Neurological disorders,3,CAUSE
+544,Parkinson's disease,542,Neurological disorders,3,CAUSE
+545,Idiopathic epilepsy,542,Neurological disorders,3,CAUSE
+546,Multiple sclerosis,542,Neurological disorders,3,CAUSE
+554,Motor neuron disease,542,Neurological disorders,3,CAUSE
+972,Headache disorders,542,Neurological disorders,3,CAUSE
+547,Migraine,972,Headache disorders,4,CAUSE
+548,Tension-type headache,972,Headache disorders,4,CAUSE
+557,Other neurological disorders,542,Neurological disorders,3,CAUSE
+558,Mental disorders,409,Non-communicable diseases,2,CAUSE
+559,Schizophrenia,558,Mental disorders,3,CAUSE
+567,Depressive disorders,558,Mental disorders,3,CAUSE
+568,Major depressive disorder,567,Depressive disorders,4,CAUSE
+569,Dysthymia,567,Depressive disorders,4,CAUSE
+570,Bipolar disorder,558,Mental disorders,3,CAUSE
+571,Anxiety disorders,558,Mental disorders,3,CAUSE
+572,Eating disorders,558,Mental disorders,3,CAUSE
+573,Anorexia nervosa,572,Eating disorders,4,CAUSE
+574,Bulimia nervosa,572,Eating disorders,4,CAUSE
+575,Autism spectrum disorders,558,Mental disorders,3,CAUSE
+578,Attention-deficit/hyperactivity disorder,558,Mental disorders,3,CAUSE
+579,Conduct disorder,558,Mental disorders,3,CAUSE
+582,Idiopathic developmental intellectual disability,558,Mental disorders,3,CAUSE
+585,Other mental disorders,558,Mental disorders,3,CAUSE
+973,Substance use disorders,409,Non-communicable diseases,2,CAUSE
+560,Alcohol use disorders,973,Substance use disorders,3,CAUSE
+561,Drug use disorders,973,Substance use disorders,3,CAUSE
+562,Opioid use disorders,561,Drug use disorders,4,CAUSE
+563,Cocaine use disorders,561,Drug use disorders,4,CAUSE
+564,Amphetamine use disorders,561,Drug use disorders,4,CAUSE
+565,Cannabis use disorders,561,Drug use disorders,4,CAUSE
+566,Other drug use disorders,561,Drug use disorders,4,CAUSE
+974,Diabetes and kidney diseases,409,Non-communicable diseases,2,CAUSE
+587,Diabetes mellitus,974,Diabetes and kidney diseases,3,CAUSE
+975,Diabetes mellitus type 1,587,Diabetes mellitus,4,CAUSE
+976,Diabetes mellitus type 2,587,Diabetes mellitus,4,CAUSE
+589,Chronic kidney disease,974,Diabetes and kidney diseases,3,CAUSE
+997,Chronic kidney disease due to diabetes mellitus type 1,589,Chronic kidney disease,4,CAUSE
+998,Chronic kidney disease due to diabetes mellitus type 2,589,Chronic kidney disease,4,CAUSE
+591,Chronic kidney disease due to hypertension,589,Chronic kidney disease,4,CAUSE
+592,Chronic kidney disease due to glomerulonephritis,589,Chronic kidney disease,4,CAUSE
+593,Chronic kidney disease due to other and unspecified causes,589,Chronic kidney disease,4,CAUSE
+588,Acute glomerulonephritis,974,Diabetes and kidney diseases,3,CAUSE
+653,Skin and subcutaneous diseases,409,Non-communicable diseases,2,CAUSE
+654,Dermatitis,653,Skin and subcutaneous diseases,3,CAUSE
+977,Atopic dermatitis,654,Dermatitis,4,CAUSE
+978,Contact dermatitis,654,Dermatitis,4,CAUSE
+979,Seborrhoeic dermatitis,654,Dermatitis,4,CAUSE
+655,Psoriasis,653,Skin and subcutaneous diseases,3,CAUSE
+980,Bacterial skin diseases,653,Skin and subcutaneous diseases,3,CAUSE
+656,Cellulitis,980,Bacterial skin diseases,4,CAUSE
+657,Pyoderma,980,Bacterial skin diseases,4,CAUSE
+658,Scabies,653,Skin and subcutaneous diseases,3,CAUSE
+659,Fungal skin diseases,653,Skin and subcutaneous diseases,3,CAUSE
+660,Viral skin diseases,653,Skin and subcutaneous diseases,3,CAUSE
+661,Acne vulgaris,653,Skin and subcutaneous diseases,3,CAUSE
+662,Alopecia areata,653,Skin and subcutaneous diseases,3,CAUSE
+663,Pruritus,653,Skin and subcutaneous diseases,3,CAUSE
+664,Urticaria,653,Skin and subcutaneous diseases,3,CAUSE
+665,Decubitus ulcer,653,Skin and subcutaneous diseases,3,CAUSE
+668,Other skin and subcutaneous diseases,653,Skin and subcutaneous diseases,3,CAUSE
+669,Sense organ diseases,409,Non-communicable diseases,2,CAUSE
+981,Blindness and vision loss,669,Sense organ diseases,3,CAUSE
+670,Glaucoma,981,Blindness and vision loss,4,CAUSE
+671,Cataract,981,Blindness and vision loss,4,CAUSE
+672,Age-related macular degeneration,981,Blindness and vision loss,4,CAUSE
+999,Refraction disorders,981,Blindness and vision loss,4,CAUSE
+1000,Near vision loss,981,Blindness and vision loss,4,CAUSE
+675,Other vision loss,981,Blindness and vision loss,4,CAUSE
+674,Age-related and other hearing loss,669,Sense organ diseases,3,CAUSE
+679,Other sense organ diseases,669,Sense organ diseases,3,CAUSE
+626,Musculoskeletal disorders,409,Non-communicable diseases,2,CAUSE
+627,Rheumatoid arthritis,626,Musculoskeletal disorders,3,CAUSE
+628,Osteoarthritis,626,Musculoskeletal disorders,3,CAUSE
+1014,Osteoarthritis hip,628,Osteoarthritis,4,CAUSE
+1015,Osteoarthritis knee,628,Osteoarthritis,4,CAUSE
+1016,Osteoarthritis hand,628,Osteoarthritis,4,CAUSE
+1017,Osteoarthritis other,628,Osteoarthritis,4,CAUSE
+630,Low back pain,626,Musculoskeletal disorders,3,CAUSE
+631,Neck pain,626,Musculoskeletal disorders,3,CAUSE
+632,Gout,626,Musculoskeletal disorders,3,CAUSE
+639,Other musculoskeletal disorders,626,Musculoskeletal disorders,3,CAUSE
+640,Other non-communicable diseases,409,Non-communicable diseases,2,CAUSE
+641,Congenital birth defects,640,Other non-communicable diseases,3,CAUSE
+642,Neural tube defects,641,Congenital birth defects,4,CAUSE
+643,Congenital heart anomalies,641,Congenital birth defects,4,CAUSE
+644,Orofacial clefts,641,Congenital birth defects,4,CAUSE
+645,Down syndrome,641,Congenital birth defects,4,CAUSE
+646,Turner syndrome,641,Congenital birth defects,4,CAUSE
+647,Klinefelter syndrome,641,Congenital birth defects,4,CAUSE
+648,Other chromosomal abnormalities,641,Congenital birth defects,4,CAUSE
+649,Congenital musculoskeletal and limb anomalies,641,Congenital birth defects,4,CAUSE
+650,Urogenital congenital anomalies,641,Congenital birth defects,4,CAUSE
+651,Digestive congenital anomalies,641,Congenital birth defects,4,CAUSE
+652,Other congenital birth defects,641,Congenital birth defects,4,CAUSE
+594,Urinary diseases and male infertility,640,Other non-communicable diseases,3,CAUSE
+595,Urinary tract infections and interstitial nephritis,594,Urinary diseases and male infertility,4,CAUSE
+596,Urolithiasis,594,Urinary diseases and male infertility,4,CAUSE
+597,Benign prostatic hyperplasia,594,Urinary diseases and male infertility,4,CAUSE
+598,Male infertility,594,Urinary diseases and male infertility,4,CAUSE
+602,Other urinary diseases,594,Urinary diseases and male infertility,4,CAUSE
+603,Gynecological diseases,640,Other non-communicable diseases,3,CAUSE
+604,Uterine fibroids,603,Gynecological diseases,4,CAUSE
+605,Polycystic ovarian syndrome,603,Gynecological diseases,4,CAUSE
+606,Female infertility,603,Gynecological diseases,4,CAUSE
+607,Endometriosis,603,Gynecological diseases,4,CAUSE
+608,Genital prolapse,603,Gynecological diseases,4,CAUSE
+609,Premenstrual syndrome,603,Gynecological diseases,4,CAUSE
+612,Other gynecological diseases,603,Gynecological diseases,4,CAUSE
+613,Hemoglobinopathies and hemolytic anemias,640,Other non-communicable diseases,3,CAUSE
+614,Thalassemias,613,Hemoglobinopathies and hemolytic anemias,4,CAUSE
+837,Thalassemias trait,613,Hemoglobinopathies and hemolytic anemias,4,CAUSE
+615,Sickle cell disorders,613,Hemoglobinopathies and hemolytic anemias,4,CAUSE
+838,Sickle cell trait,613,Hemoglobinopathies and hemolytic anemias,4,CAUSE
+616,G6PD deficiency,613,Hemoglobinopathies and hemolytic anemias,4,CAUSE
+839,G6PD trait,613,Hemoglobinopathies and hemolytic anemias,4,CAUSE
+618,Other hemoglobinopathies and hemolytic anemias,613,Hemoglobinopathies and hemolytic anemias,4,CAUSE
+619,"Endocrine, metabolic, blood, and immune disorders",640,Other non-communicable diseases,3,CAUSE
+680,Oral disorders,640,Other non-communicable diseases,3,CAUSE
+681,Caries of deciduous teeth,680,Oral disorders,4,CAUSE
+682,Caries of permanent teeth,680,Oral disorders,4,CAUSE
+683,Periodontal diseases,680,Oral disorders,4,CAUSE
+684,Edentulism,680,Oral disorders,4,CAUSE
+685,Other oral disorders,680,Oral disorders,4,CAUSE
+686,Sudden infant death syndrome,640,Other non-communicable diseases,3,CAUSE
+687,Injuries,294,All causes,1,CAUSE
+688,Transport injuries,687,Injuries,2,CAUSE
+689,Road injuries,688,Transport injuries,3,CAUSE
+690,Pedestrian road injuries,689,Road injuries,4,CAUSE
+691,Cyclist road injuries,689,Road injuries,4,CAUSE
+692,Motorcyclist road injuries,689,Road injuries,4,CAUSE
+693,Motor vehicle road injuries,689,Road injuries,4,CAUSE
+694,Other road injuries,689,Road injuries,4,CAUSE
+695,Other transport injuries,688,Transport injuries,3,CAUSE
+696,Unintentional injuries,687,Injuries,2,CAUSE
+697,Falls,696,Unintentional injuries,3,CAUSE
+698,Drowning,696,Unintentional injuries,3,CAUSE
+699,"Fire, heat, and hot substances",696,Unintentional injuries,3,CAUSE
+700,Poisonings,696,Unintentional injuries,3,CAUSE
+701,Poisoning by carbon monoxide,700,Poisonings,4,CAUSE
+703,Poisoning by other means,700,Poisonings,4,CAUSE
+704,Exposure to mechanical forces,696,Unintentional injuries,3,CAUSE
+705,Unintentional firearm injuries,704,Exposure to mechanical forces,4,CAUSE
+707,Other exposure to mechanical forces,704,Exposure to mechanical forces,4,CAUSE
+708,Adverse effects of medical treatment,696,Unintentional injuries,3,CAUSE
+709,Animal contact,696,Unintentional injuries,3,CAUSE
+710,Venomous animal contact,709,Animal contact,4,CAUSE
+711,Non-venomous animal contact,709,Animal contact,4,CAUSE
+712,Foreign body,696,Unintentional injuries,3,CAUSE
+713,Pulmonary aspiration and foreign body in airway,712,Foreign body,4,CAUSE
+714,Foreign body in eyes,712,Foreign body,4,CAUSE
+715,Foreign body in other body part,712,Foreign body,4,CAUSE
+842,Environmental heat and cold exposure,696,Unintentional injuries,3,CAUSE
+729,Exposure to forces of nature,696,Unintentional injuries,3,CAUSE
+1056,Other unintentional injuries,696,Unintentional injuries,3,CAUSE
+717,Self-harm and interpersonal violence,687,Injuries,2,CAUSE
+718,Self-harm,717,Self-harm and interpersonal violence,3,CAUSE
+721,Self-harm by firearm,718,Self-harm,4,CAUSE
+723,Self-harm by other specified means,718,Self-harm,4,CAUSE
+724,Interpersonal violence,717,Self-harm and interpersonal violence,3,CAUSE
+725,Physical violence by firearm,724,Interpersonal violence,4,CAUSE
+726,Physical violence by sharp object,724,Interpersonal violence,4,CAUSE
+941,Sexual violence,724,Interpersonal violence,4,CAUSE
+727,Physical violence by other means,724,Interpersonal violence,4,CAUSE
+945,Conflict and terrorism,717,Self-harm and interpersonal violence,3,CAUSE
+854,Police conflict and executions,717,Self-harm and interpersonal violence,3,CAUSE
+1058,Other COVID-19 pandemic-related outcomes,294,All causes,1,CAUSE
+1029,Total cancers,294,All causes,1,CAUSE
+1026,Total burden related to hepatitis B,294,All causes,1,CAUSE
+1027,Total burden related to hepatitis C,294,All causes,1,CAUSE
+1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),294,All causes,1,CAUSE
+1059,Total Cancers excluding Non-melanoma skin cancer,294,All causes,1,CAUSE

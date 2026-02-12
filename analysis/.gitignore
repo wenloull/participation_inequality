@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+
+# Large Raw Data Files (Exclude)
+mesh_*.csv
+journal_140k.csv
+journal_195k.csv
+journal_301k.csv
+journal_99k.csv
+author_140k.csv
+author_195k.csv
+author_301k.csv
+author_99k.csv
+year_140k.csv
+year_195k.csv
+year_301k.csv
+year_99k.csv
+
+# Keep 138k and 70k related files as they seem to be the main datasets
+# public_aggregated_participants_138k.csv is the main one
+
+# Excel intermediate files
+*.xlsx
+
+# System
+.DS_Store
+Thumbs.db

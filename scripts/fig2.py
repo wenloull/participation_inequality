@@ -95,12 +95,12 @@ def lorenz_curve_data(values):
 def load_disease_ci_results():
     """Load Panel A data: Disease CIS with confidence intervals"""
     try:
-        ci_results = pd.read_csv('rq2_bootstrap_confidence_intervals.csv')
+        ci_results = pd.read_csv(r'c:/Users/dell/PycharmProjects/nlp2/participation_inequality/data/rq2_bootstrap_confidence_intervals.csv')
         ci_results = ci_results.sort_values('CIS_Mean', ascending=True)
         print(f"[OK] Loaded disease CIS results: {len(ci_results)} diseases")
         return ci_results
     except:
-        print("[WARN]️ Could not load rq2_bootstrap_confidence_intervals.csv")
+        print("[WARN] Could not load rq2_bootstrap_confidence_intervals.csv")
         return None
 
 
@@ -108,7 +108,7 @@ def load_temporal_pbr_data():
     """Load temporal PBR data for all analyses"""
     try:
         # Load public aggregated dataset (70k for RQ2)
-        base_dir = r"c:/Users/dell/PycharmProjects/nlp2/participation_inequality/analysis"
+        base_dir = r"c:/Users/dell/PycharmProjects/nlp2/participation_inequality/data"
         aggregated_file = os.path.join(base_dir, "public_aggregated_participants_70k.csv")
         gbd_file = os.path.join(base_dir, "gbddisease.csv")
         
@@ -221,8 +221,8 @@ def load_pbr_data():
     """Load aggregated PBR data for country-level analysis"""
     try:
         # Load from existing results if available
-        disease_results = pd.read_csv('rq2_disease_inequality_results.csv')
-        country_results = pd.read_csv('rq2_country_inequality_results.csv')
+        disease_results = pd.read_csv(r'c:/Users/dell/PycharmProjects/nlp2/participation_inequality/data/rq2_disease_inequality_results.csv')
+        country_results = pd.read_csv(r'c:/Users/dell/PycharmProjects/nlp2/participation_inequality/data/rq2_country_inequality_results.csv')
 
         # Reconstruct PBR data from disease results
         pbr_records = []
@@ -942,7 +942,7 @@ def run_statistical_tests(temporal_reduction, temporal_theil, disease_lorenz, co
 
         print("\n[GRAPH] Panel C: Temporal Inequality Reduction Trend")
         print(f"   Slope: {slope:.4f}% per period")
-        print(f"   R²: {r_value**2:.4f}")
+        print(f"   R^2: {r_value**2:.4f}")
         print(f"   p-value: {p_value:.4f}")
         print(f"   Interpretation: {'Significant' if p_value < 0.05 else 'Not significant'} trend")
 
@@ -963,7 +963,7 @@ def run_statistical_tests(temporal_reduction, temporal_theil, disease_lorenz, co
                 print("   [OK] CONFIRMED: Between-disease declining, Within-disease increasing")
                 print("   → Country factors becoming MORE dominant over time")
             elif slope_b > 0 and slope_w < 0:
-                print("   ❗ UNEXPECTED: Between-disease increasing, Within-disease declining")
+                print("   [WARN] UNEXPECTED: Between-disease increasing, Within-disease declining")
             else:
                 print("   → Both trends moving in same direction")
         else:
@@ -986,7 +986,7 @@ def run_statistical_tests(temporal_reduction, temporal_theil, disease_lorenz, co
                 print("   [OK] CONFIRMED: Between-disease declining, Within-disease increasing")
                 print("   → Country factors becoming MORE dominant over time")
             elif slope_b > 0 and slope_w < 0:
-                print("   ❗ UNEXPECTED: Between-disease increasing, Within-disease declining")
+                print("   [WARN] UNEXPECTED: Between-disease increasing, Within-disease declining")
             else:
                 print("   → Both trends moving in same direction")
         else:
@@ -1002,7 +1002,7 @@ def run_statistical_tests(temporal_reduction, temporal_theil, disease_lorenz, co
     if gini_diff < 0.1:
         print(f"   [OK] CONSISTENT: Gini values are similar (difference: {gini_diff:.4f})")
     else:
-        print(f"   [WARN]️  WARNING: Large difference between Panel B and Panel C Gini (difference: {gini_diff:.4f})")
+        print(f"   [WARN] WARNING: Large difference between Panel B and Panel C Gini (difference: {gini_diff:.4f})")
         print(f"   → This suggests different aggregation methods are being used")
         print(f"   → Panel B should use the same method as Panel C for consistency")
 
@@ -1039,7 +1039,7 @@ if __name__ == "__main__":
                 results_dict['total_countries']
             )
         except Exception as e:
-            print(f"\n[WARN]️  Could not run complete statistical tests: {e}")
+            print(f"\n[WARN] Could not run complete statistical tests: {e}")
             import traceback
             traceback.print_exc()
 
@@ -1049,8 +1049,8 @@ if __name__ == "__main__":
         print("\nOutputs:")
         print("  [GRAPH] figure_3_rq2_four_panels_main.png (for main text)")
         print("  [GRAPH] figure_3_rq2_five_panels_supplementary.png (for SI)")
-        print("  📄 figure3_panel_c_temporal_reduction.csv (Panel C data)")
-        print("  📄 figure3_panel_d_theil_decomposition.csv (Panel D data)")
+        print("  - figure3_panel_c_temporal_reduction.csv (Panel C data)")
+        print("  - figure3_panel_d_theil_decomposition.csv (Panel D data)")
         print("\nFigure Structure:")
         print("  Panel A: Disease CIS with 95% CI (bootstrap)")
         print("  Panel B: Lorenz curves - disease removal effect")

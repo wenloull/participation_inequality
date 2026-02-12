@@ -10,7 +10,7 @@ def create_aggregated_dataset(size_suffix):
     print(f"\nProcessing {size_suffix} dataset...")
     
     # Define file paths
-    base_dir = r"c:/Users/dell/PycharmProjects/nlp2/participation_inequality/analysis"
+    base_dir = r"c:/Users/dell/PycharmProjects/nlp2/participation_inequality/data"
     pmid_file = os.path.join(base_dir, f"pmid_cause_{size_suffix}.csv")
     year_file = os.path.join(base_dir, f"year_{size_suffix}.csv")
     geoinfor_file = os.path.join(base_dir, "geoinfor.csv")

@@ -96,7 +96,7 @@ def load_data():
     """Load all datasets"""
     print("Loading datasets...")
 
-    base_dir = r"c:/Users/dell/PycharmProjects/nlp2/participation_inequality/analysis"
+    base_dir = r"c:/Users/dell/PycharmProjects/nlp2/participation_inequality/data"
     aggregated_file = os.path.join(base_dir, "public_aggregated_participants_138k.csv")
     gbd_file = os.path.join(base_dir, "gbddisease.csv")
     country_mapping_file = os.path.join(base_dir, "country_mapping_for_figure.csv")

@@ -2152,7 +2152,7 @@ def main():
     print("=" * 80)
 
     # 
-    df = load_and_prepare_data('APP_visual_factor.csv')
+    df = load_and_prepare_data(r'c:/Users/dell/PycharmProjects/nlp2/participation_inequality/data/APP_visual_factor.csv')
 
     # 
     nodes_df, edges_df = create_network_data(df)

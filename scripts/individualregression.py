@@ -65,7 +65,7 @@ CUSTOM_DISEASES = [
 # =============================================================================
 
 print("\n=== Loading base data (Open Science) ===")
-base_dir = r"c:/Users/dell/PycharmProjects/nlp2/participation_inequality/analysis"
+base_dir = r"c:/Users/dell/PycharmProjects/nlp2/participation_inequality/data"
 aggregated_file = os.path.join(base_dir, "public_aggregated_participants_70k.csv")
 gbd_file = os.path.join(base_dir, "gbddisease.csv")
 all_about_country_file = os.path.join(base_dir, "AllAboutCountry.csv")

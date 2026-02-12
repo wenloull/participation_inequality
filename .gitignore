@@ -15,11 +15,13 @@ geoinfor.csv
 mesh_*.csv
 journal_*.csv
 author_*.csv
+disease_*.csv
 
 # Output Figures and Results
 figure_*.png
 figure_*.pdf
 figure_*.csv
+figure3_*.csv
 intervention_*.png
 intervention_*.pdf
 scenario_*.csv

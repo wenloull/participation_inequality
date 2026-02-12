@@ -22,7 +22,6 @@ Contains all the raw and processed datasets required for the analysis.
 Contains the core Python scripts used to generate figures and perform statistical analysis.
 - `fig1.py`: Generates Figure 1 (Geographic maps, Heatmaps, and Income-level scatter plots).
 - `fig2.py`: Generates Figure 3 (RQ2 analysis: Disease vs Country drivers of inequality).
-- `create_public_dataset.py`: Aggregates raw trial data into the public datasets used by other scripts.
 - `individualregression.py`: Performs regression analysis on trial participation drivers.
 - `intervention.py`: Simulates interventions and generates visualization for the intervention analysis.
 
@@ -56,12 +55,6 @@ To reproduce the primary figures from the study, run the following commands from
    ```bash
    python scripts/intervention.py
    ```
-
-### Data Aggregation
-If you need to re-generate the aggregated public datasets from the raw files (PMIDs, years, causes):
-```bash
-python scripts/create_public_dataset.py
-```
 
 ## Attribution
 This work is part of the ongoing research on Participation Inequality in clinical trials.

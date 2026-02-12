@@ -8,23 +8,23 @@ __pycache__/
 .vscode/
 *.swp
 
-# Large Raw Data Files (Exclude)
+# Raw Data and Aggregation Inputs (Exclude from GitHub)
+pmid_cause_*.csv
+year_*.csv
+geoinfor.csv
 mesh_*.csv
-journal_140k.csv
-journal_195k.csv
-journal_301k.csv
-journal_99k.csv
-author_140k.csv
-author_195k.csv
-author_301k.csv
-author_99k.csv
-year_140k.csv
-year_195k.csv
-year_301k.csv
-year_99k.csv
+journal_*.csv
+author_*.csv
 
-# Keep 138k and 70k related files as they seem to be the main datasets
-# public_aggregated_participants_138k.csv is the main one
+# Output Figures and Results
+figure_*.png
+figure_*.pdf
+figure_*.csv
+intervention_*.png
+intervention_*.pdf
+scenario_*.csv
+network_*.csv
+*.jpeg
 
 # Excel intermediate files
 *.xlsx

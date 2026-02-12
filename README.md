@@ -1,77 +1,68 @@
-# Global Clinical Trial Participation Inequality Analysis
+# Participation Inequality in Clinical Trials
 
-## Overview
-This repository contains the data and code for the analysis of global inequality in clinical trial participation. The analysis quantifies the disparity between disease burden and trial participation across countries and diseases, investigating the drivers of this inequality and potential intervention strategies.
+This project analyzes global participation inequality in clinical trials, comparing the disease burden (DALYs) of various conditions against the volume of clinical trials (participants and study counts) conducted across different countries and income levels.
 
-## Dataset
-The analysis relies on aggregated datasets that combine clinical trial records with Global Burden of Disease (GBD) metrics:
+## Project Structure
 
-*   **`public_aggregated_participants_138k.csv`**: The primary aggregated dataset containing trial participation counts matched with disease burden (DALYs) for each country and disease.
-*   **`APP_country_disease_data.csv`**: The processed dataset used for regression and network models, including variables such as Participation-to-Burden Ratio (PBR), GDP, and health infrastructure metrics.
+The repository is organized into three main directories to separate data, analysis scripts, and utility tools.
 
-## Code Structure &amp; Execution Order
-The analysis pipeline consists of several Python scripts. For full reproducibility, please run them in the following order:
+### 📂 Directory Overview
 
-### 1. Data Preparation
-*   **`create_public_dataset.py`**: Creates the aggregated public dataset from raw data files.
-*   **Key Outputs**: `public_aggregated_participants_138k.csv`
+#### `data/`
+Contains all the raw and processed datasets required for the analysis.
+- `gbddisease.csv`: Global Burden of Disease (GBD) data including DALYs (Disability-Adjusted Life Years).
+- `AllAboutCountry.csv`: Country-level demographic and economic data (e.g., income levels, population).
+- `public_aggregated_participants_70k.csv`: Aggregated trial participant data (subset of 70k).
+- `public_aggregated_participants_138k.csv`: Full aggregated trial participant data (138k).
+- `disease_mapping.csv`: Mapping between GBD disease IDs and user-defined disease categories.
+- `rq2_bootstrap_confidence_intervals.csv`: Output data for Research Question 2 analysis.
+- `geoinfor.csv`: Geographic information for mapping and visualization.
 
-### 2. `fig1.py`
-*   **Purpose**: Generates visualizations for the geographical distribution of inequality (Figure 1), including:
-    *   Geographic maps showing Participation-to-Burden Ratio (PBR) for CVD and HIV
-    *   Specialization Index heatmap across countries and diseases
-    *   Income-level scatter plots comparing disease burden vs. participation
-*   **Key Outputs**: `combined_figure_final.png` / `.pdf`
+#### `scripts/`
+Contains the core Python scripts used to generate figures and perform statistical analysis.
+- `fig1.py`: Generates Figure 1 (Geographic maps, Heatmaps, and Income-level scatter plots).
+- `fig2.py`: Generates Figure 3 (RQ2 analysis: Disease vs Country drivers of inequality).
+- `create_public_dataset.py`: Aggregates raw trial data into the public datasets used by other scripts.
+- `individualregression.py`: Performs regression analysis on trial participation drivers.
+- `intervention.py`: Simulates interventions and generates visualization for the intervention analysis.
 
-### 3. `fig2.py`
-*   **Purpose**: Generates visualizations for bivariate relationships between participation and burden (Figure 2).
-*   **Key Outputs**: Figure 2 visualizations
+#### `utils/`
+Helper scripts for data cleaning and system debugging.
+- `fix_unicode.py`: Resolves character encoding issues in raw datasets.
+- `sanitize.py`: Cleans and formats data for consistency.
+- `debug_gpd.py`: Diagnostic tool for GeoPandas and Fiona environment issues.
 
-### 4. `individualregression.py`
-*   **Purpose**: Performs comprehensive regression analysis to identify country-level and disease-level predictors of participation inequality. It generates the residuals used in subsequent network analyses.
-*   **Key Outputs**: 
-    *   `regression_per_country.csv`
-    *   `residuals_per_country.csv`
-    *   `regression_per_disease.csv`
-    *   `residuals_per_disease.csv`
+## Getting Started
 
-### 5. `rq2_additional.py` / `temporaltheilrobust.py`
-*   **Purpose**: Analyzes temporal trends in inequality (RQ2) and assesses the impact of hypothetical removal of top diseases/countries on global inequality metrics.
-*   **Key Outputs**: 
-    *   Temporal inequality trend figures
-    *   Bootstrap confidence intervals
+### Prerequisites
+Ensure you have Python 3.8+ installed. You can install the required libraries using:
 
-### 6. `intervention.py`
-*   **Purpose**: Conducts network analysis on the residuals to identify structural barriers and simulates policy intervention scenarios to estimate their potential impact on reducing inequality.
-*   **Key Outputs**: 
-    *   `network_panel_D_stats.json`
-    *   `scenario_full_alignment_calculated.csv`
-    *   `scenario_targeted_alignment_calculated.csv`
+```bash
+pip install -r requirements.txt
+```
 
-### Utility Scripts
-The `utils/` directory contains debugging and maintenance scripts:
-*   `debug_gpd.py`: Tests geopandas shapefile loading
-*   `fix_unicode.py`: Replaces Unicode characters with ASCII equivalents
-*   `sanitize.py`: Removes non-ASCII characters from Python files
+### Reproducing Figures
+To reproduce the primary figures from the study, run the following commands from the project root:
 
-## Usage Instructions
-1.  **Install Dependencies**: Ensure you have Python installed, then install the required packages:
-    ```bash
-    pip install -r requirements.txt
-    ```
+1. **Generate Figure 1:**
+   ```bash
+   python scripts/fig1.py
+   ```
+2. **Generate Main & SI Figure 3:**
+   ```bash
+   python scripts/fig2.py
+   ```
+3. **Generate Intervention Plots:**
+   ```bash
+   python scripts/intervention.py
+   ```
 
-2.  **Data Placement**: Verify that all `.csv` data files are located in the same directory as the scripts.
+### Data Aggregation
+If you need to re-generate the aggregated public datasets from the raw files (PMIDs, years, causes):
+```bash
+python scripts/create_public_dataset.py
+```
 
-3.  **Run Analysis**: Execute the scripts sequentially:
-    ```bash
-    python create_public_dataset.py
-    python fig1.py
-    python fig2.py
-    python individualregression.py
-    python rq2_additional.py
-    python intervention.py
-    ```
-
-## Requirements
-*   Python 3.8+
-*   See `requirements.txt` for specific package versions.
+## Attribution
+This work is part of the ongoing research on Participation Inequality in clinical trials.
+Contact: Wen Lou (wlou@infor.ecnu.edu.cn)

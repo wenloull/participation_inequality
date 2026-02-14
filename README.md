@@ -21,9 +21,9 @@ Contains all the raw and processed datasets required for the analysis.
 #### `scripts/`
 Contains the core Python scripts used to generate figures and perform statistical analysis.
 - `fig1.py`: Generates Figure 1 (Geographic maps, Heatmaps, and Income-level scatter plots).
-- `fig2.py`: Generates Figure 3 (RQ2 analysis: Disease vs Country drivers of inequality).
+- `fig2.py`: Generates Figure 2 (RQ2 analysis: Disease vs Country drivers of inequality).
 - `individualregression.py`: Performs regression analysis on trial participation drivers.
-- `intervention.py`: Simulates interventions and generates visualization for the intervention analysis.
+- `intervention.py`: Generates Figure 3. Simulates interventions and generates visualization for the intervention analysis.
 
 #### `utils/`
 Helper scripts for data cleaning and system debugging.

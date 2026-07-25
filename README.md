@@ -11,8 +11,8 @@ public/
 ├── README.md                            # Complete replication guide and dataset schema
 │
 ├── data/                                 # Unified Public Datasets & Figure Spreadsheets
-│   ├── APP_visual_factor_trimmed.csv     # Essential macro-development & governance indicators (~15 columns)
-│   ├── intervention_national_pbr_validation.csv # National PBR validation dataset (182 countries)
+│   ├── country_macro_indicators.csv      # Macro-development & governance indicators
+│   ├── intervention_national_pbr_validation.csv # National PBR validation dataset (180 countries)
 │   ├── figure1_source_data.csv           # Source data for Figure 1 global overview & distributions
 │   ├── figure2_panel_c_temporal_reduction.csv # Source data for Figure 2 Panel C (temporal inequality reduction)
 │   ├── figure2_panel_d_theil_decomposition.csv # Source data for Figure 2 Panel D (within vs. between disease Theil decomposition)
@@ -49,14 +49,14 @@ public/
 
 ## 📊 Data Availability & Schema
 
-All public datasets are contained within the `public/data/` directory:
+All public datasets are contained within the `data/` directory:
 
-1. **`APP_visual_factor_trimmed.csv`**: Contains country-disease panel statistics and key macro development indicators:
+1. **`country_macro_indicators.csv`**: Contains country-disease panel statistics and key macro development indicators:
    - **Identifiers & Core Metrics**: `ISO3`, `Disease`, `Participants`, `DALYs`, `PBR`, `log_pbr`, `income_group`
    - **Research Capacity**: `rd_expenditure`, `total_publications`, `total_citations`, `researchers_per_million`
    - **Health Infrastructure**: `health_expenditure_per_capita`, `doctors_per_10k`, `hospital_beds`, `sanitation`, `uhc_index`
    - **Governance & Development**: `gdp_per_capita`, `hdi`, `democracy_index`, `trust_scientists`, `altruism`
-2. **`intervention_national_pbr_validation.csv`**: National-level aggregate participation, DALY burden, and PBR metrics across 182 countries.
+2. **`intervention_national_pbr_validation.csv`**: National-level aggregate participation, DALY burden, and PBR metrics across 180 countries.
 3. **Spreadsheet Source Data Files**: Per-figure spreadsheets providing exact numbers behind main text and Extended Data figures.
 
 *Note: In accordance with Nature Portfolio guidelines, proprietary per-study raw extraction datasets (`geoinfor183`) are omitted from public deposition to protect primary data extractions but are available from the corresponding author upon reasonable request.*
@@ -72,7 +72,7 @@ pip install pandas numpy scipy statsmodels scikit-learn matplotlib seaborn geopa
 ```
 
 ### Running the Analysis Suite
-Run scripts sequentially from the `public/` directory:
+Run scripts sequentially:
 
 ```bash
 # 1. Main Text Figures

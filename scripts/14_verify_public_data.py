@@ -11,13 +11,13 @@ def main():
     print("VERIFYING UNIFIED PUBLIC DATASETS IN public/data/")
     print("="*80)
 
-    # 1. Check trimmed macro factor dataset
-    app_trimmed_path = os.path.join(data_dir, 'APP_visual_factor_trimmed.csv')
-    if os.path.exists(app_trimmed_path):
-        app_df = pd.read_csv(app_trimmed_path)
-        print(f"✓ APP_visual_factor_trimmed.csv: {len(app_df)} rows, {len(app_df.columns)} columns, {app_df['ISO3'].nunique()} ISO3 countries")
+    # 1. Check macro development indicators dataset
+    app_macro_path = os.path.join(data_dir, 'country_macro_indicators.csv')
+    if os.path.exists(app_macro_path):
+        app_df = pd.read_csv(app_macro_path)
+        print(f"✓ country_macro_indicators.csv: {len(app_df)} rows, {len(app_df.columns)} columns, {app_df['ISO3'].nunique()} ISO3 countries")
     else:
-        print("❌ APP_visual_factor_trimmed.csv missing")
+        print("❌ country_macro_indicators.csv missing")
 
     # 2. Check national validation dataset
     val_path = os.path.join(data_dir, 'intervention_national_pbr_validation.csv')

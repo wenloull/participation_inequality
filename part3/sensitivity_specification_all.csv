@@ -1,0 +1,683 @@
+Index,Variables,GDP_Coeff,GDP_p,R2,IsValidStory
+0,"log_gdp_per_capita, rd_expenditure",-0.34676635344433937,0.0031134077251923735,0.18130681982399965,False
+1,"log_gdp_per_capita, log_total_publications",-0.3688549593894461,0.0010917472393188236,0.22289450159491886,False
+2,"log_gdp_per_capita, log_total_citations",-0.42957222529104133,0.00022398943816001317,0.23309296107347188,False
+3,"log_gdp_per_capita, log_researchers_per_million",-0.3109075188149777,0.09160489968194359,0.03236599421055453,False
+4,"log_population, rd_expenditure",,,0.3580866288786829,False
+5,"log_population, log_total_publications",,,0.312323427213957,False
+6,"log_population, log_total_citations",,,0.32618333076906203,False
+7,"log_population, log_researchers_per_million",,,0.29545845795933356,False
+8,"foreign_aid_received, rd_expenditure",,,0.14224327504771384,False
+9,"foreign_aid_received, log_total_publications",,,0.18737785708621912,False
+10,"foreign_aid_received, log_total_citations",,,0.18299818223634423,False
+11,"foreign_aid_received, log_researchers_per_million",,,0.02050950689708053,False
+12,"log_gdp_per_capita, log_health_expenditure_per_capita",-1.000450601422536,0.005126690172299067,0.05096455950016443,False
+13,"log_gdp_per_capita, log_hospital_beds_per_capita",-0.0799510411398521,0.41786930824840285,0.1970873330699695,False
+14,"log_gdp_per_capita, log_doctors_per_10k",0.28378054500987,0.1476041473043677,0.011672142615993253,False
+15,"log_gdp_per_capita, uhc_index",0.10943905206482264,0.6103484124211035,0.0018847667110770683,False
+16,"log_gdp_per_capita, log_medical_school",0.033851701593251945,0.7561115138672372,0.008510545979095063,False
+17,"log_gdp_per_capita, sanitation",-0.10160060199770996,0.5545418471173975,0.008737983904034352,False
+18,"log_population, log_health_expenditure_per_capita",,,0.32383040494963566,False
+19,"log_population, log_hospital_beds_per_capita",,,0.28289669368392956,False
+20,"log_population, log_doctors_per_10k",,,0.2816828438748459,False
+21,"log_population, uhc_index",,,0.2931291946255571,False
+22,"log_population, log_medical_school",,,0.34492429430978266,False
+23,"log_population, sanitation",,,0.2984315092350409,False
+24,"foreign_aid_received, log_health_expenditure_per_capita",,,0.015544728114961659,False
+25,"foreign_aid_received, log_hospital_beds_per_capita",,,0.1962990157728789,False
+26,"foreign_aid_received, log_doctors_per_10k",,,0.02375915252891081,False
+27,"foreign_aid_received, uhc_index",,,0.015046056729664858,False
+28,"foreign_aid_received, log_medical_school",,,0.016815613133656537,False
+29,"foreign_aid_received, sanitation",,,0.014582858607064542,False
+30,"log_gdp_per_capita, hdi",-0.20349018796257928,0.49159474647589585,0.006151536168197191,False
+31,"log_gdp_per_capita, democracy_index",-0.042936825446330006,0.729931309850666,0.014252635424029658,False
+32,"log_gdp_per_capita, altruism",0.060825388455027024,0.5979745292956837,0.0015156849857422827,False
+33,"log_gdp_per_capita, trust_scientists",0.032464790536334595,0.8035040093480086,0.0019915963332799436,False
+34,"log_population, hdi",,,0.306612576446633,False
+35,"log_population, democracy_index",,,0.34179015134938484,False
+36,"log_population, altruism",,,0.29103667412416956,False
+37,"log_population, trust_scientists",,,0.28395608510746584,False
+38,"foreign_aid_received, hdi",,,0.013145502148077526,False
+39,"foreign_aid_received, democracy_index",,,0.0204658102882046,False
+40,"foreign_aid_received, altruism",,,0.013417522610548072,False
+41,"foreign_aid_received, trust_scientists",,,0.013206125136812963,False
+42,"rd_expenditure, log_health_expenditure_per_capita",,,0.167272617688495,False
+43,"rd_expenditure, log_hospital_beds_per_capita",,,0.24191634490132763,False
+44,"rd_expenditure, log_doctors_per_10k",,,0.18296628780232427,False
+45,"rd_expenditure, uhc_index",,,0.17289435365360972,False
+46,"rd_expenditure, log_medical_school",,,0.14257881461333788,False
+47,"rd_expenditure, sanitation",,,0.17087912029584373,False
+48,"log_total_publications, log_health_expenditure_per_capita",,,0.2011011141824357,False
+49,"log_total_publications, log_hospital_beds_per_capita",,,0.2245594431715947,False
+50,"log_total_publications, log_doctors_per_10k",,,0.23943583331665985,False
+51,"log_total_publications, uhc_index",,,0.22092175128313263,False
+52,"log_total_publications, log_medical_school",,,0.20745646710411125,False
+53,"log_total_publications, sanitation",,,0.20070422084521422,False
+54,"log_total_citations, log_health_expenditure_per_capita",,,0.21050508439772375,False
+55,"log_total_citations, log_hospital_beds_per_capita",,,0.23165294160262795,False
+56,"log_total_citations, log_doctors_per_10k",,,0.24512415646592,False
+57,"log_total_citations, uhc_index",,,0.22807044098084994,False
+58,"log_total_citations, log_medical_school",,,0.19524336265882847,False
+59,"log_total_citations, sanitation",,,0.20535177132263482,False
+60,"log_researchers_per_million, log_health_expenditure_per_capita",,,0.01780787355408109,False
+61,"log_researchers_per_million, log_hospital_beds_per_capita",,,0.1958657238470154,False
+62,"log_researchers_per_million, log_doctors_per_10k",,,0.05692210360787986,False
+63,"log_researchers_per_million, uhc_index",,,0.03210060271154913,False
+64,"log_researchers_per_million, log_medical_school",,,0.02072257061169236,False
+65,"log_researchers_per_million, sanitation",,,0.018101676253512666,False
+66,"rd_expenditure, hdi",,,0.1788657556235902,False
+67,"rd_expenditure, democracy_index",,,0.14738868751757106,False
+68,"rd_expenditure, altruism",,,0.14776704800527263,False
+69,"rd_expenditure, trust_scientists",,,0.16387793822147378,False
+70,"log_total_publications, hdi",,,0.22056922384261402,False
+71,"log_total_publications, democracy_index",,,0.17954795408140178,False
+72,"log_total_publications, altruism",,,0.1816767066698204,False
+73,"log_total_publications, trust_scientists",,,0.20080843261149028,False
+74,"log_total_citations, hdi",,,0.2318642319913684,False
+75,"log_total_citations, democracy_index",,,0.18157490663499576,False
+76,"log_total_citations, altruism",,,0.18208705813862824,False
+77,"log_total_citations, trust_scientists",,,0.204255011737273,False
+78,"log_researchers_per_million, hdi",,,0.024638729902566436,False
+79,"log_researchers_per_million, democracy_index",,,0.0212534607428273,False
+80,"log_researchers_per_million, altruism",,,0.018005101642862953,False
+81,"log_researchers_per_million, trust_scientists",,,0.020227055657286885,False
+82,"log_health_expenditure_per_capita, hdi",,,0.02213101910251336,False
+83,"log_health_expenditure_per_capita, democracy_index",,,0.0152050029134001,False
+84,"log_health_expenditure_per_capita, altruism",,,0.011453798424884476,False
+85,"log_health_expenditure_per_capita, trust_scientists",,,0.01115581479367822,False
+86,"log_hospital_beds_per_capita, hdi",,,0.1970394159383284,False
+87,"log_hospital_beds_per_capita, democracy_index",,,0.20455532212545413,False
+88,"log_hospital_beds_per_capita, altruism",,,0.1943841762836126,False
+89,"log_hospital_beds_per_capita, trust_scientists",,,0.20009356998429473,False
+90,"log_doctors_per_10k, hdi",,,0.03920516442235156,False
+91,"log_doctors_per_10k, democracy_index",,,0.021329225131703877,False
+92,"log_doctors_per_10k, altruism",,,0.0006517532945080617,False
+93,"log_doctors_per_10k, trust_scientists",,,0.0060161520528924095,False
+94,"uhc_index, hdi",,,0.012595364126355424,False
+95,"uhc_index, democracy_index",,,0.015111982632410648,False
+96,"uhc_index, altruism",,,0.0005025457909675346,False
+97,"uhc_index, trust_scientists",,,0.0016995760525326808,False
+98,"log_medical_school, hdi",,,0.0097779386467568,False
+99,"log_medical_school, democracy_index",,,0.020761391566234244,False
+100,"log_medical_school, altruism",,,0.008001296466463081,False
+101,"log_medical_school, trust_scientists",,,0.008245128803866186,False
+102,"sanitation, hdi",,,0.006955476751200007,False
+103,"sanitation, democracy_index",,,0.0148893520208766,False
+104,"sanitation, altruism",,,0.00731024124878632,False
+105,"sanitation, trust_scientists",,,0.007003345160988883,False
+106,"log_gdp_per_capita, rd_expenditure, log_health_expenditure_per_capita",-0.7125708144396137,0.033011550294917265,0.18732148716863672,False
+107,"log_gdp_per_capita, rd_expenditure, log_hospital_beds_per_capita",-0.3370160059530145,0.002287875089607131,0.2788026557963994,False
+108,"log_gdp_per_capita, rd_expenditure, log_doctors_per_10k",-0.17693688158376442,0.3574659102611677,0.18666748550394818,False
+109,"log_gdp_per_capita, rd_expenditure, uhc_index",-0.2913475840036741,0.155779815078859,0.1817812674457464,False
+110,"log_gdp_per_capita, rd_expenditure, log_medical_school",-0.3524746650452371,0.0028229465012830288,0.18261557739763545,False
+111,"log_gdp_per_capita, rd_expenditure, sanitation",-0.26967898965916764,0.09033778481003803,0.18353323574327673,False
+112,"log_gdp_per_capita, log_total_publications, log_health_expenditure_per_capita",-0.9856917052020505,0.002159120347576117,0.24040588046900613,False
+113,"log_gdp_per_capita, log_total_publications, log_hospital_beds_per_capita",-0.30140949784490323,0.007744128440476559,0.25349185437349964,False
+114,"log_gdp_per_capita, log_total_publications, log_doctors_per_10k",-0.07936468570003999,0.6567038665926296,0.2402410401023818,False
+115,"log_gdp_per_capita, log_total_publications, uhc_index",-0.2229185530514074,0.2533865512137834,0.22635222422943213,False
+116,"log_gdp_per_capita, log_total_publications, log_medical_school",-0.42751209041662175,0.00013526885154446685,0.267002495302593,False
+117,"log_gdp_per_capita, log_total_publications, sanitation",-0.3620346815667238,0.021886512756919968,0.22291048092787735,False
+118,"log_gdp_per_capita, log_total_citations, log_health_expenditure_per_capita",-0.9048315278111624,0.004735788777871122,0.2435637558410374,False
+119,"log_gdp_per_capita, log_total_citations, log_hospital_beds_per_capita",-0.3583849088425117,0.0019418990888665562,0.27021632773577486,False
+120,"log_gdp_per_capita, log_total_citations, log_doctors_per_10k",-0.15799574582574252,0.38153930757947263,0.24821717626138207,False
+121,"log_gdp_per_capita, log_total_citations, uhc_index",-0.28239006195754557,0.1491993110982874,0.23663345742763908,False
+122,"log_gdp_per_capita, log_total_citations, log_medical_school",-0.4790418152543613,3.702248156329456e-05,0.26542544349620445,False
+123,"log_gdp_per_capita, log_total_citations, sanitation",-0.4093039349214004,0.009845321756668362,0.23323898320025505,False
+124,"log_gdp_per_capita, log_researchers_per_million, log_health_expenditure_per_capita",-1.0604905717883781,0.0031211695897901924,0.06275023217986597,False
+125,"log_gdp_per_capita, log_researchers_per_million, log_hospital_beds_per_capita",-0.09258458217558642,0.5891413575823488,0.1971224070770956,False
+126,"log_gdp_per_capita, log_researchers_per_million, log_doctors_per_10k",-0.03854234147545846,0.860650030734764,0.05707792135385903,False
+127,"log_gdp_per_capita, log_researchers_per_million, uhc_index",-0.19136491402374944,0.4303288678638688,0.03532294052777796,False
+128,"log_gdp_per_capita, log_researchers_per_million, log_medical_school",-0.30197197145738286,0.10268951668362877,0.034607437558807685,False
+129,"log_gdp_per_capita, log_researchers_per_million, sanitation",-0.3571149425968955,0.0845611895734158,0.03364018554686066,False
+130,"log_population, rd_expenditure, log_health_expenditure_per_capita",,,0.3590483890758319,False
+131,"log_population, rd_expenditure, log_hospital_beds_per_capita",,,0.3616345497227057,False
+132,"log_population, rd_expenditure, log_doctors_per_10k",,,0.36674907923874134,False
+133,"log_population, rd_expenditure, uhc_index",,,0.35926688769939497,False
+134,"log_population, rd_expenditure, log_medical_school",,,0.43920475610104903,False
+135,"log_population, rd_expenditure, sanitation",,,0.3601763509624839,False
+136,"log_population, log_total_publications, log_health_expenditure_per_capita",,,0.3248551931433714,False
+137,"log_population, log_total_publications, log_hospital_beds_per_capita",,,0.31364016852031984,False
+138,"log_population, log_total_publications, log_doctors_per_10k",,,0.31939425658893605,False
+139,"log_population, log_total_publications, uhc_index",,,0.3123719692079202,False
+140,"log_population, log_total_publications, log_medical_school",,,0.43544347641684666,False
+141,"log_population, log_total_publications, sanitation",,,0.3130029744835833,False
+142,"log_population, log_total_citations, log_health_expenditure_per_capita",,,0.3309612642308467,False
+143,"log_population, log_total_citations, log_hospital_beds_per_capita",,,0.328676753414357,False
+144,"log_population, log_total_citations, log_doctors_per_10k",,,0.33776546658801265,False
+145,"log_population, log_total_citations, uhc_index",,,0.3275304955931796,False
+146,"log_population, log_total_citations, log_medical_school",,,0.45275844075971494,False
+147,"log_population, log_total_citations, sanitation",,,0.3262023504384348,False
+148,"log_population, log_researchers_per_million, log_health_expenditure_per_capita",,,0.3346350090716017,False
+149,"log_population, log_researchers_per_million, log_hospital_beds_per_capita",,,0.2958052436842459,False
+150,"log_population, log_researchers_per_million, log_doctors_per_10k",,,0.30242097174768034,False
+151,"log_population, log_researchers_per_million, uhc_index",,,0.29635162757985434,False
+152,"log_population, log_researchers_per_million, log_medical_school",,,0.3924234310657687,False
+153,"log_population, log_researchers_per_million, sanitation",,,0.29967008759185476,False
+154,"foreign_aid_received, rd_expenditure, log_health_expenditure_per_capita",,,0.1738798403090699,False
+155,"foreign_aid_received, rd_expenditure, log_hospital_beds_per_capita",,,0.249507299557564,False
+156,"foreign_aid_received, rd_expenditure, log_doctors_per_10k",,,0.19574848305917192,False
+157,"foreign_aid_received, rd_expenditure, uhc_index",,,0.1809510482051664,False
+158,"foreign_aid_received, rd_expenditure, log_medical_school",,,0.142592060378128,False
+159,"foreign_aid_received, rd_expenditure, sanitation",,,0.17411188074599437,False
+160,"foreign_aid_received, log_total_publications, log_health_expenditure_per_capita",,,0.20336684795669602,False
+161,"foreign_aid_received, log_total_publications, log_hospital_beds_per_capita",,,0.23731955948651096,False
+162,"foreign_aid_received, log_total_publications, log_doctors_per_10k",,,0.23945680589276008,False
+163,"foreign_aid_received, log_total_publications, uhc_index",,,0.22142908660111527,False
+164,"foreign_aid_received, log_total_publications, log_medical_school",,,0.2172961918749996,False
+165,"foreign_aid_received, log_total_publications, sanitation",,,0.20506566372030843,False
+166,"foreign_aid_received, log_total_citations, log_health_expenditure_per_capita",,,0.21102340689323684,False
+167,"foreign_aid_received, log_total_citations, log_hospital_beds_per_capita",,,0.24490970389447986,False
+168,"foreign_aid_received, log_total_citations, log_doctors_per_10k",,,0.24572669100380018,False
+169,"foreign_aid_received, log_total_citations, uhc_index",,,0.2280733036232685,False
+170,"foreign_aid_received, log_total_citations, log_medical_school",,,0.20178850624170075,False
+171,"foreign_aid_received, log_total_citations, sanitation",,,0.20778865508844158,False
+172,"foreign_aid_received, log_researchers_per_million, log_health_expenditure_per_capita",,,0.02126772977753988,False
+173,"foreign_aid_received, log_researchers_per_million, log_hospital_beds_per_capita",,,0.196808528964854,False
+174,"foreign_aid_received, log_researchers_per_million, log_doctors_per_10k",,,0.06995923145253391,False
+175,"foreign_aid_received, log_researchers_per_million, uhc_index",,,0.03945309791074447,False
+176,"foreign_aid_received, log_researchers_per_million, log_medical_school",,,0.022824877369432173,False
+177,"foreign_aid_received, log_researchers_per_million, sanitation",,,0.02123560149849435,False
+178,"log_gdp_per_capita, rd_expenditure, hdi",-0.2355494061623935,0.3816714712124516,0.18222839820186132,False
+179,"log_gdp_per_capita, rd_expenditure, democracy_index",-0.34384069680441837,0.005915841703241967,0.1813279406796109,False
+180,"log_gdp_per_capita, rd_expenditure, altruism",-0.3379809805734739,0.006012932458714495,0.18156250755459669,False
+181,"log_gdp_per_capita, rd_expenditure, trust_scientists",-0.28934050365273867,0.024863763018880783,0.18614159762747873,False
+182,"log_gdp_per_capita, log_total_publications, hdi",-0.24132009740655236,0.35757430321226613,0.22409849050791397,False
+183,"log_gdp_per_capita, log_total_publications, democracy_index",-0.3998673677801715,0.0011688045765390108,0.22462491227779147,False
+184,"log_gdp_per_capita, log_total_publications, altruism",-0.3710533126251768,0.0019017238323415593,0.22290839420360098,False
+185,"log_gdp_per_capita, log_total_publications, trust_scientists",-0.3131329143170205,0.012487925250474884,0.22710647878809487,False
+186,"log_gdp_per_capita, log_total_citations, hdi",-0.24763473599749103,0.34160196852349367,0.235580182202626,False
+187,"log_gdp_per_capita, log_total_citations, democracy_index",-0.4329424204807255,0.000495639305547305,0.23311863507751795,False
+188,"log_gdp_per_capita, log_total_citations, altruism",-0.42355847991426776,0.000521574415576345,0.23320767022208877,False
+189,"log_gdp_per_capita, log_total_citations, trust_scientists",-0.3665398379424549,0.003921108169177549,0.23897352040842668,False
+190,"log_gdp_per_capita, log_researchers_per_million, hdi",-0.37925003472174734,0.2110237989530112,0.032785937102816076,False
+191,"log_gdp_per_capita, log_researchers_per_million, democracy_index",-0.3679283485220258,0.05225550825194113,0.04082702435828944,False
+192,"log_gdp_per_capita, log_researchers_per_million, altruism",-0.3323405576273545,0.09156184128011587,0.03288015154654089,False
+193,"log_gdp_per_capita, log_researchers_per_million, trust_scientists",-0.29833128961148236,0.10953984930029871,0.03358837025044681,False
+194,"log_population, rd_expenditure, hdi",,,0.35839538573796315,False
+195,"log_population, rd_expenditure, democracy_index",,,0.37121849225895354,False
+196,"log_population, rd_expenditure, altruism",,,0.35948359423492837,False
+197,"log_population, rd_expenditure, trust_scientists",,,0.36376709403830765,False
+198,"log_population, log_total_publications, hdi",,,0.31397046675718765,False
+199,"log_population, log_total_publications, democracy_index",,,0.3435177624085085,False
+200,"log_population, log_total_publications, altruism",,,0.3152789382698328,False
+201,"log_population, log_total_publications, trust_scientists",,,0.31336803463564455,False
+202,"log_population, log_total_citations, hdi",,,0.32618360645920375,False
+203,"log_population, log_total_citations, democracy_index",,,0.3478208938041032,False
+204,"log_population, log_total_citations, altruism",,,0.327796508726212,False
+205,"log_population, log_total_citations, trust_scientists",,,0.32933513998628694,False
+206,"log_population, log_researchers_per_million, hdi",,,0.3070564816211673,False
+207,"log_population, log_researchers_per_million, democracy_index",,,0.34179894055143833,False
+208,"log_population, log_researchers_per_million, altruism",,,0.3023842791859169,False
+209,"log_population, log_researchers_per_million, trust_scientists",,,0.2956600937559375,False
+210,"foreign_aid_received, rd_expenditure, hdi",,,0.19199680958594123,False
+211,"foreign_aid_received, rd_expenditure, democracy_index",,,0.14760677291152857,False
+212,"foreign_aid_received, rd_expenditure, altruism",,,0.14790677372018712,False
+213,"foreign_aid_received, rd_expenditure, trust_scientists",,,0.1644612238145654,False
+214,"foreign_aid_received, log_total_publications, hdi",,,0.2207613286539185,False
+215,"foreign_aid_received, log_total_publications, democracy_index",,,0.18835605118831578,False
+216,"foreign_aid_received, log_total_publications, altruism",,,0.19005512907648248,False
+217,"foreign_aid_received, log_total_publications, trust_scientists",,,0.2083999744781171,False
+218,"foreign_aid_received, log_total_citations, hdi",,,0.23203339069818896,False
+219,"foreign_aid_received, log_total_citations, democracy_index",,,0.1876956396819629,False
+220,"foreign_aid_received, log_total_citations, altruism",,,0.18818106350397246,False
+221,"foreign_aid_received, log_total_citations, trust_scientists",,,0.20983167433689787,False
+222,"foreign_aid_received, log_researchers_per_million, hdi",,,0.03178495957207694,False
+223,"foreign_aid_received, log_researchers_per_million, democracy_index",,,0.0237020388565633,False
+224,"foreign_aid_received, log_researchers_per_million, altruism",,,0.021270598323716028,False
+225,"foreign_aid_received, log_researchers_per_million, trust_scientists",,,0.022834865356161527,False
+226,"log_gdp_per_capita, log_health_expenditure_per_capita, hdi",-0.9231717344206176,0.014306202452166114,0.05308941073045248,False
+227,"log_gdp_per_capita, log_health_expenditure_per_capita, democracy_index",-0.9839172631139388,0.008514347507701036,0.05108535345117138,False
+228,"log_gdp_per_capita, log_health_expenditure_per_capita, altruism",-0.995144421727088,0.005750652682290459,0.051063949337947334,False
+229,"log_gdp_per_capita, log_health_expenditure_per_capita, trust_scientists",-1.00765016763554,0.004946647188328636,0.052161350000638596,False
+230,"log_gdp_per_capita, log_hospital_beds_per_capita, hdi",-0.04609128783253687,0.8632084528458859,0.19716720874340066,False
+231,"log_gdp_per_capita, log_hospital_beds_per_capita, democracy_index",-0.21549378284734846,0.059141211696592796,0.2196004904973572,False
+232,"log_gdp_per_capita, log_hospital_beds_per_capita, altruism",-0.0993127412821947,0.35063638418301335,0.19813846378209288,False
+233,"log_gdp_per_capita, log_hospital_beds_per_capita, trust_scientists",-0.024983345112930936,0.8314967387494381,0.20028773778631448,False
+234,"log_gdp_per_capita, log_doctors_per_10k, hdi",-0.25911043450372595,0.37476539936243203,0.0432551206441828,False
+235,"log_gdp_per_capita, log_doctors_per_10k, democracy_index",0.1987250021070976,0.3233339254959001,0.026434380865566487,False
+236,"log_gdp_per_capita, log_doctors_per_10k, altruism",0.33008403909577466,0.1265112817713274,0.013084560753861774,False
+237,"log_gdp_per_capita, log_doctors_per_10k, trust_scientists",0.27430963743344966,0.16219625462925336,0.01637395133763364,False
+238,"log_gdp_per_capita, uhc_index, hdi",-0.21692738969376751,0.46284124369167545,0.01544499016894929,False
+239,"log_gdp_per_capita, uhc_index, democracy_index",0.03519354247891417,0.8722483120419408,0.01524852465981541,False
+240,"log_gdp_per_capita, uhc_index, altruism",0.11472381870467772,0.6018270003140485,0.001960522997184966,False
+241,"log_gdp_per_capita, uhc_index, trust_scientists",0.11151143981257317,0.6044204466961882,0.003135127266375104,False
+242,"log_gdp_per_capita, log_medical_school, hdi",-0.18359924165548194,0.5356396518819309,0.01181299255489987,False
+243,"log_gdp_per_capita, log_medical_school, democracy_index",-0.07127779895563885,0.5724544444195789,0.02243276413145956,False
+244,"log_gdp_per_capita, log_medical_school, altruism",0.03812771318989213,0.7442980720411386,0.008566997018766287,False
+245,"log_gdp_per_capita, log_medical_school, trust_scientists",0.029986426459331146,0.8181464607190645,0.0085262232087846,False
+246,"log_gdp_per_capita, sanitation, hdi",-0.2656999634583501,0.38065181066103193,0.011039529394505032,False
+247,"log_gdp_per_capita, sanitation, democracy_index",-0.18144210209521192,0.3130001411550935,0.02025171149693339,False
+248,"log_gdp_per_capita, sanitation, altruism",-0.09572074070655777,0.5864858288425249,0.008883801693777227,False
+249,"log_gdp_per_capita, sanitation, trust_scientists",-0.10060810023491862,0.5675110237381663,0.00874216643564385,False
+250,"log_population, log_health_expenditure_per_capita, hdi",,,0.3334016272250675,False
+251,"log_population, log_health_expenditure_per_capita, democracy_index",,,0.34804107244943205,False
+252,"log_population, log_health_expenditure_per_capita, altruism",,,0.32562259669484084,False
+253,"log_population, log_health_expenditure_per_capita, trust_scientists",,,0.3296754467806675,False
+254,"log_population, log_hospital_beds_per_capita, hdi",,,0.30998485547700305,False
+255,"log_population, log_hospital_beds_per_capita, democracy_index",,,0.3426662162371742,False
+256,"log_population, log_hospital_beds_per_capita, altruism",,,0.2923642062984122,False
+257,"log_population, log_hospital_beds_per_capita, trust_scientists",,,0.2849133868722378,False
+258,"log_population, log_doctors_per_10k, hdi",,,0.367586915469972,False
+259,"log_population, log_doctors_per_10k, democracy_index",,,0.34718954405168967,False
+260,"log_population, log_doctors_per_10k, altruism",,,0.2920552820737611,False
+261,"log_population, log_doctors_per_10k, trust_scientists",,,0.2839733028079898,False
+262,"log_population, uhc_index, hdi",,,0.3167375593544487,False
+263,"log_population, uhc_index, democracy_index",,,0.3417946866223198,False
+264,"log_population, uhc_index, altruism",,,0.2991881444056288,False
+265,"log_population, uhc_index, trust_scientists",,,0.2933437331158696,False
+266,"log_population, log_medical_school, hdi",,,0.42956662974321136,False
+267,"log_population, log_medical_school, democracy_index",,,0.4437587100700451,False
+268,"log_population, log_medical_school, altruism",,,0.3709576864209073,False
+269,"log_population, log_medical_school, trust_scientists",,,0.3767735374143071,False
+270,"log_population, sanitation, hdi",,,0.3067846153069884,False
+271,"log_population, sanitation, democracy_index",,,0.3429533834913867,False
+272,"log_population, sanitation, altruism",,,0.30334426710652207,False
+273,"log_population, sanitation, trust_scientists",,,0.2987787267435734,False
+274,"foreign_aid_received, log_health_expenditure_per_capita, hdi",,,0.03288085426498766,False
+275,"foreign_aid_received, log_health_expenditure_per_capita, democracy_index",,,0.020473131718435456,False
+276,"foreign_aid_received, log_health_expenditure_per_capita, altruism",,,0.016644880465407685,False
+277,"foreign_aid_received, log_health_expenditure_per_capita, trust_scientists",,,0.016001468784052175,False
+278,"foreign_aid_received, log_hospital_beds_per_capita, hdi",,,0.1974406559530345,False
+279,"foreign_aid_received, log_hospital_beds_per_capita, democracy_index",,,0.2111213792299872,False
+280,"foreign_aid_received, log_hospital_beds_per_capita, altruism",,,0.19674093227538447,False
+281,"foreign_aid_received, log_hospital_beds_per_capita, trust_scientists",,,0.20102159967441646,False
+282,"foreign_aid_received, log_doctors_per_10k, hdi",,,0.051967082763609285,False
+283,"foreign_aid_received, log_doctors_per_10k, democracy_index",,,0.04164798515496637,False
+284,"foreign_aid_received, log_doctors_per_10k, altruism",,,0.023892801382907725,False
+285,"foreign_aid_received, log_doctors_per_10k, trust_scientists",,,0.03278953796918216,False
+286,"foreign_aid_received, uhc_index, hdi",,,0.02143684136043056,False
+287,"foreign_aid_received, uhc_index, democracy_index",,,0.027681572005807342,False
+288,"foreign_aid_received, uhc_index, altruism",,,0.015102101242562171,False
+289,"foreign_aid_received, uhc_index, trust_scientists",,,0.0174562209710466,False
+290,"foreign_aid_received, log_medical_school, hdi",,,0.016937217796185955,False
+291,"foreign_aid_received, log_medical_school, democracy_index",,,0.0246422123624096,False
+292,"foreign_aid_received, log_medical_school, altruism",,,0.01712705356228461,False
+293,"foreign_aid_received, log_medical_school, trust_scientists",,,0.01683338150511493,False
+294,"foreign_aid_received, sanitation, hdi",,,0.017179963202313187,False
+295,"foreign_aid_received, sanitation, democracy_index",,,0.020535523470996964,False
+296,"foreign_aid_received, sanitation, altruism",,,0.015371422529894652,False
+297,"foreign_aid_received, sanitation, trust_scientists",,,0.01475916804652655,False
+298,"rd_expenditure, log_health_expenditure_per_capita, hdi",,,0.18048735835739405,False
+299,"rd_expenditure, log_health_expenditure_per_capita, democracy_index",,,0.16727261769675417,False
+300,"rd_expenditure, log_health_expenditure_per_capita, altruism",,,0.16824708278102585,False
+301,"rd_expenditure, log_health_expenditure_per_capita, trust_scientists",,,0.174254263683279,False
+302,"rd_expenditure, log_hospital_beds_per_capita, hdi",,,0.28204232194582746,False
+303,"rd_expenditure, log_hospital_beds_per_capita, democracy_index",,,0.2420244008430279,False
+304,"rd_expenditure, log_hospital_beds_per_capita, altruism",,,0.24361461720584654,False
+305,"rd_expenditure, log_hospital_beds_per_capita, trust_scientists",,,0.27342185989940104,False
+306,"rd_expenditure, log_doctors_per_10k, hdi",,,0.18348817705080966,False
+307,"rd_expenditure, log_doctors_per_10k, democracy_index",,,0.1829972883725759,False
+308,"rd_expenditure, log_doctors_per_10k, altruism",,,0.18635997442513696,False
+309,"rd_expenditure, log_doctors_per_10k, trust_scientists",,,0.18452989247678275,False
+310,"rd_expenditure, uhc_index, hdi",,,0.17886906248945522,False
+311,"rd_expenditure, uhc_index, democracy_index",,,0.1731031806868285,False
+312,"rd_expenditure, uhc_index, altruism",,,0.17403249044549352,False
+313,"rd_expenditure, uhc_index, trust_scientists",,,0.17620334572578145,False
+314,"rd_expenditure, log_medical_school, hdi",,,0.18078210590001453,False
+315,"rd_expenditure, log_medical_school, democracy_index",,,0.14759720957291833,False
+316,"rd_expenditure, log_medical_school, altruism",,,0.14814539606642285,False
+317,"rd_expenditure, log_medical_school, trust_scientists",,,0.1667696637654531,False
+318,"rd_expenditure, sanitation, hdi",,,0.1817190928733512,False
+319,"rd_expenditure, sanitation, democracy_index",,,0.1721014189955219,False
+320,"rd_expenditure, sanitation, altruism",,,0.1721860724317522,False
+321,"rd_expenditure, sanitation, trust_scientists",,,0.17708894489524407,False
+322,"log_total_publications, log_health_expenditure_per_capita, hdi",,,0.229052009018604,False
+323,"log_total_publications, log_health_expenditure_per_capita, democracy_index",,,0.20257832459298364,False
+324,"log_total_publications, log_health_expenditure_per_capita, altruism",,,0.2014626595759469,False
+325,"log_total_publications, log_health_expenditure_per_capita, trust_scientists",,,0.2090638678791864,False
+326,"log_total_publications, log_hospital_beds_per_capita, hdi",,,0.2540058760463515,False
+327,"log_total_publications, log_hospital_beds_per_capita, democracy_index",,,0.22502951745964928,False
+328,"log_total_publications, log_hospital_beds_per_capita, altruism",,,0.225485308006953,False
+329,"log_total_publications, log_hospital_beds_per_capita, trust_scientists",,,0.2460221106093422,False
+330,"log_total_publications, log_doctors_per_10k, hdi",,,0.24013320993887832,False
+331,"log_total_publications, log_doctors_per_10k, democracy_index",,,0.24136402945107083,False
+332,"log_total_publications, log_doctors_per_10k, altruism",,,0.24121691912941334,False
+333,"log_total_publications, log_doctors_per_10k, trust_scientists",,,0.2396611008181121,False
+334,"log_total_publications, uhc_index, hdi",,,0.2227214419510497,False
+335,"log_total_publications, uhc_index, democracy_index",,,0.22199333785628106,False
+336,"log_total_publications, uhc_index, altruism",,,0.2210670694844732,False
+337,"log_total_publications, uhc_index, trust_scientists",,,0.22254047211394912,False
+338,"log_total_publications, log_medical_school, hdi",,,0.26181653234176816,False
+339,"log_total_publications, log_medical_school, democracy_index",,,0.21481870949847237,False
+340,"log_total_publications, log_medical_school, altruism",,,0.2128634184071081,False
+341,"log_total_publications, log_medical_school, trust_scientists",,,0.22741294159013536,False
+342,"log_total_publications, sanitation, hdi",,,0.22064501277301418,False
+343,"log_total_publications, sanitation, democracy_index",,,0.20070464101151497,False
+344,"log_total_publications, sanitation, altruism",,,0.20141064776308182,False
+345,"log_total_publications, sanitation, trust_scientists",,,0.20885272502944952,False
+346,"log_total_citations, log_health_expenditure_per_capita, hdi",,,0.2366938562566846,False
+347,"log_total_citations, log_health_expenditure_per_capita, democracy_index",,,0.21061537768994498,False
+348,"log_total_citations, log_health_expenditure_per_capita, altruism",,,0.21144363605834016,False
+349,"log_total_citations, log_health_expenditure_per_capita, trust_scientists",,,0.21941878334619525,False
+350,"log_total_citations, log_hospital_beds_per_capita, hdi",,,0.2721768234456502,False
+351,"log_total_citations, log_hospital_beds_per_capita, democracy_index",,,0.23165680970769864,False
+352,"log_total_citations, log_hospital_beds_per_capita, altruism",,,0.23343754381197368,False
+353,"log_total_citations, log_hospital_beds_per_capita, trust_scientists",,,0.2589520106579182,False
+354,"log_total_citations, log_doctors_per_10k, hdi",,,0.24523281703472044,False
+355,"log_total_citations, log_doctors_per_10k, democracy_index",,,0.245137813195223,False
+356,"log_total_citations, log_doctors_per_10k, altruism",,,0.2492814490552152,False
+357,"log_total_citations, log_doctors_per_10k, trust_scientists",,,0.2460251538418713,False
+358,"log_total_citations, uhc_index, hdi",,,0.23291538836584103,False
+359,"log_total_citations, uhc_index, democracy_index",,,0.22809282637943795,False
+360,"log_total_citations, uhc_index, altruism",,,0.22893383037329174,False
+361,"log_total_citations, uhc_index, trust_scientists",,,0.23063192199142069,False
+362,"log_total_citations, log_medical_school, hdi",,,0.2617382830817866,False
+363,"log_total_citations, log_medical_school, democracy_index",,,0.20864559155677898,False
+364,"log_total_citations, log_medical_school, altruism",,,0.20348639764517384,False
+365,"log_total_citations, log_medical_school, trust_scientists",,,0.22086513110716333,False
+366,"log_total_citations, sanitation, hdi",,,0.23205886339446746,False
+367,"log_total_citations, sanitation, democracy_index",,,0.20662165021467882,False
+368,"log_total_citations, sanitation, altruism",,,0.20717555840078739,False
+369,"log_total_citations, sanitation, trust_scientists",,,0.21565143069095805,False
+370,"log_researchers_per_million, log_health_expenditure_per_capita, hdi",,,0.033246713578062526,False
+371,"log_researchers_per_million, log_health_expenditure_per_capita, democracy_index",,,0.02335636752943948,False
+372,"log_researchers_per_million, log_health_expenditure_per_capita, altruism",,,0.018087827342713636,False
+373,"log_researchers_per_million, log_health_expenditure_per_capita, trust_scientists",,,0.020252939248445845,False
+374,"log_researchers_per_million, log_hospital_beds_per_capita, hdi",,,0.19705902634429284,False
+375,"log_researchers_per_million, log_hospital_beds_per_capita, democracy_index",,,0.21566463508381017,False
+376,"log_researchers_per_million, log_hospital_beds_per_capita, altruism",,,0.19625963265730695,False
+377,"log_researchers_per_million, log_hospital_beds_per_capita, trust_scientists",,,0.20011920252627846,False
+378,"log_researchers_per_million, log_doctors_per_10k, hdi",,,0.06736492332766142,False
+379,"log_researchers_per_million, log_doctors_per_10k, democracy_index",,,0.06606591463777878,False
+380,"log_researchers_per_million, log_doctors_per_10k, altruism",,,0.057285098550601155,False
+381,"log_researchers_per_million, log_doctors_per_10k, trust_scientists",,,0.05729013145081685,False
+382,"log_researchers_per_million, uhc_index, hdi",,,0.032990487819897885,False
+383,"log_researchers_per_million, uhc_index, democracy_index",,,0.03974927840993181,False
+384,"log_researchers_per_million, uhc_index, altruism",,,0.032164765795228534,False
+385,"log_researchers_per_million, uhc_index, trust_scientists",,,0.03213919049550207,False
+386,"log_researchers_per_million, log_medical_school, hdi",,,0.027726846874974287,False
+387,"log_researchers_per_million, log_medical_school, democracy_index",,,0.025162282127566993,False
+388,"log_researchers_per_million, log_medical_school, altruism",,,0.021163236189858603,False
+389,"log_researchers_per_million, log_medical_school, trust_scientists",,,0.0245189728185512,False
+390,"log_researchers_per_million, sanitation, hdi",,,0.024964158304714434,False
+391,"log_researchers_per_million, sanitation, democracy_index",,,0.022269619734780033,False
+392,"log_researchers_per_million, sanitation, altruism",,,0.01835249791276916,False
+393,"log_researchers_per_million, sanitation, trust_scientists",,,0.020327431918927497,False
+394,"log_gdp_per_capita, rd_expenditure, log_health_expenditure_per_capita, hdi",-0.5862321773388794,0.09633477040186862,0.19261292449375877,False
+395,"log_gdp_per_capita, rd_expenditure, log_health_expenditure_per_capita, democracy_index",-0.7686016802044463,0.027154178357337855,0.18889785129685832,False
+396,"log_gdp_per_capita, rd_expenditure, log_health_expenditure_per_capita, altruism",-0.7038152877050532,0.0367385820761325,0.1875794141223952,False
+397,"log_gdp_per_capita, rd_expenditure, log_health_expenditure_per_capita, trust_scientists",-0.7213348491247109,0.030660602805531678,0.19479099677411782,False
+398,"log_gdp_per_capita, rd_expenditure, log_hospital_beds_per_capita, hdi",-0.10630070352585864,0.6754771911118518,0.28272033086579784,False
+399,"log_gdp_per_capita, rd_expenditure, log_hospital_beds_per_capita, democracy_index",-0.3752070523832475,0.0014548279770647112,0.2823255034652067,False
+400,"log_gdp_per_capita, rd_expenditure, log_hospital_beds_per_capita, altruism",-0.346311745746798,0.0028350102492544376,0.2790891637386408,False
+401,"log_gdp_per_capita, rd_expenditure, log_hospital_beds_per_capita, trust_scientists",-0.24920968788864234,0.03930516100396606,0.289870062693252,False
+402,"log_gdp_per_capita, rd_expenditure, log_doctors_per_10k, hdi",-0.25564433333846304,0.34336945341028047,0.18743048623308334,False
+403,"log_gdp_per_capita, rd_expenditure, log_doctors_per_10k, democracy_index",-0.17807934636438,0.3602498994494051,0.18667548498222764,False
+404,"log_gdp_per_capita, rd_expenditure, log_doctors_per_10k, altruism",-0.1307361737200017,0.5317826503071577,0.18807309499152403,False
+405,"log_gdp_per_capita, rd_expenditure, log_doctors_per_10k, trust_scientists",-0.18366250757217054,0.3409800570327829,0.18850624905495617,False
+406,"log_gdp_per_capita, rd_expenditure, uhc_index, hdi",-0.23554535981339783,0.3831843125726617,0.18222839924674128,False
+407,"log_gdp_per_capita, rd_expenditure, uhc_index, democracy_index",-0.2903513888727868,0.16167161842679328,0.18178763102961104,False
+408,"log_gdp_per_capita, rd_expenditure, uhc_index, altruism",-0.2817018587159498,0.17862391802079228,0.18204830736449995,False
+409,"log_gdp_per_capita, rd_expenditure, uhc_index, trust_scientists",-0.3106521459685763,0.13197578306165111,0.18621890339927072,False
+410,"log_gdp_per_capita, rd_expenditure, log_medical_school, hdi",-0.22468017804527773,0.4058333756509265,0.18382794186266227,False
+411,"log_gdp_per_capita, rd_expenditure, log_medical_school, democracy_index",-0.35161498105509514,0.005276478499669184,0.1826173072402948,False
+412,"log_gdp_per_capita, rd_expenditure, log_medical_school, altruism",-0.34390210055944875,0.005469447408358044,0.18285728231435094,False
+413,"log_gdp_per_capita, rd_expenditure, log_medical_school, trust_scientists",-0.2883212114638125,0.02552887878658688,0.18887450329880873,False
+414,"log_gdp_per_capita, rd_expenditure, sanitation, hdi",-0.19782725688282815,0.47377258703419356,0.18397963115955396,False
+415,"log_gdp_per_capita, rd_expenditure, sanitation, democracy_index",-0.2661929800013424,0.1078377681150949,0.1835611066027667,False
+416,"log_gdp_per_capita, rd_expenditure, sanitation, altruism",-0.26282728333506733,0.10648127824751343,0.18373285005338147,False
+417,"log_gdp_per_capita, rd_expenditure, sanitation, trust_scientists",-0.24374131123375622,0.13190728375944014,0.1870972613815255,False
+418,"log_gdp_per_capita, log_total_publications, log_health_expenditure_per_capita, hdi",-0.8006532629694172,0.017221517089117268,0.2522748355390082,False
+419,"log_gdp_per_capita, log_total_publications, log_health_expenditure_per_capita, democracy_index",-1.0156272153887762,0.0025395555737226993,0.2408011575491078,False
+420,"log_gdp_per_capita, log_total_publications, log_health_expenditure_per_capita, altruism",-0.9867926863334712,0.00232211319084078,0.24041017126135822,False
+421,"log_gdp_per_capita, log_total_publications, log_health_expenditure_per_capita, trust_scientists",-1.0057159317104643,0.001710708137872099,0.2499120985327108,False
+422,"log_gdp_per_capita, log_total_publications, log_hospital_beds_per_capita, hdi",-0.1456404083477288,0.5750389096020359,0.2552688641416012,False
+423,"log_gdp_per_capita, log_total_publications, log_hospital_beds_per_capita, democracy_index",-0.36018360583659176,0.0029186500084240094,0.2611643086603561,False
+424,"log_gdp_per_capita, log_total_publications, log_hospital_beds_per_capita, altruism",-0.31321317292974005,0.008405946588661672,0.25394570967782715,False
+425,"log_gdp_per_capita, log_total_publications, log_hospital_beds_per_capita, trust_scientists",-0.23151970152201853,0.06584876633807643,0.25965014934252073,False
+426,"log_gdp_per_capita, log_total_publications, log_doctors_per_10k, hdi",-0.2819908933339064,0.27847162191367925,0.24492924876298494,False
+427,"log_gdp_per_capita, log_total_publications, log_doctors_per_10k, democracy_index",-0.10958636145642593,0.5487542305374018,0.24283305932721155,False
+428,"log_gdp_per_capita, log_total_publications, log_doctors_per_10k, altruism",-0.037764825729786886,0.846919193163651,0.24136934955360712,False
+429,"log_gdp_per_capita, log_total_publications, log_doctors_per_10k, trust_scientists",-0.07927677231826044,0.6578751703945651,0.2404645211620854,False
+430,"log_gdp_per_capita, log_total_publications, uhc_index, hdi",-0.24768713757094338,0.34588435101094217,0.22643549479699254,False
+431,"log_gdp_per_capita, log_total_publications, uhc_index, democracy_index",-0.24829206014530775,0.21132035369726812,0.22851847796517266,False
+432,"log_gdp_per_capita, log_total_publications, uhc_index, altruism",-0.22473325119238946,0.26071425346153776,0.22636066667755872,False
+433,"log_gdp_per_capita, log_total_publications, uhc_index, trust_scientists",-0.23089749745924432,0.2383232333157705,0.22834639352246555,False
+434,"log_gdp_per_capita, log_total_publications, log_medical_school, hdi",-0.31783177313775535,0.21575778113261904,0.2678893160861544,False
+435,"log_gdp_per_capita, log_total_publications, log_medical_school, democracy_index",-0.43185097625288793,0.00035278731289086233,0.26704000339804956,False
+436,"log_gdp_per_capita, log_total_publications, log_medical_school, altruism",-0.4303096893340934,0.00027630430304041476,0.2670248919719842,False
+437,"log_gdp_per_capita, log_total_publications, log_medical_school, trust_scientists",-0.39826660753115817,0.0015510977552760125,0.2680252237138161,False
+438,"log_gdp_per_capita, log_total_publications, sanitation, hdi",-0.24492667202015933,0.36291860568514933,0.22411501397665934,False
+439,"log_gdp_per_capita, log_total_publications, sanitation, democracy_index",-0.39008343302014004,0.017511318977989816,0.22465903714273705,False
+440,"log_gdp_per_capita, log_total_publications, sanitation, altruism",-0.36402503020629556,0.02439581891622076,0.22292591148691887,False
+441,"log_gdp_per_capita, log_total_publications, sanitation, trust_scientists",-0.33473106947539394,0.036407440460291506,0.22730553409179444,False
+442,"log_gdp_per_capita, log_total_citations, log_health_expenditure_per_capita, hdi",-0.7181846067027104,0.032437315143818396,0.2552898519839445,False
+443,"log_gdp_per_capita, log_total_citations, log_health_expenditure_per_capita, democracy_index",-0.9694946317861804,0.0038101117699686333,0.24545016054221735,False
+444,"log_gdp_per_capita, log_total_citations, log_health_expenditure_per_capita, altruism",-0.8987880936591006,0.005383837035171631,0.24369235309550596,False
+445,"log_gdp_per_capita, log_total_citations, log_health_expenditure_per_capita, trust_scientists",-0.9227723038964377,0.0038665359278977985,0.2537576295040086,False
+446,"log_gdp_per_capita, log_total_citations, log_hospital_beds_per_capita, hdi",-0.14857642599272303,0.5621643219007685,0.27349383119526083,False
+447,"log_gdp_per_capita, log_total_citations, log_hospital_beds_per_capita, democracy_index",-0.3940737483189197,0.0011951659657322145,0.2739306795191617,False
+448,"log_gdp_per_capita, log_total_citations, log_hospital_beds_per_capita, altruism",-0.36473273054820854,0.002475685219675027,0.2703645248852864,False
+449,"log_gdp_per_capita, log_total_citations, log_hospital_beds_per_capita, trust_scientists",-0.28117987642888426,0.02613757145320419,0.2784528360598325,False
+450,"log_gdp_per_capita, log_total_citations, log_doctors_per_10k, hdi",-0.2809938874361769,0.27855191887542013,0.2499950823740894,False
+451,"log_gdp_per_capita, log_total_citations, log_doctors_per_10k, democracy_index",-0.16502534115390924,0.3696076726046722,0.24840644903651465,False
+452,"log_gdp_per_capita, log_total_citations, log_doctors_per_10k, altruism",-0.10166049740425705,0.6049312363789179,0.2503637313689372,False
+453,"log_gdp_per_capita, log_total_citations, log_doctors_per_10k, trust_scientists",-0.15946693209021967,0.3781763680180551,0.24917516165300835,False
+454,"log_gdp_per_capita, log_total_citations, uhc_index, hdi",-0.2520502603679527,0.3342521794532608,0.2367611895066568,False
+455,"log_gdp_per_capita, log_total_citations, uhc_index, democracy_index",-0.28699613363013704,0.14859839818116993,0.2367268510345577,False
+456,"log_gdp_per_capita, log_total_citations, uhc_index, altruism",-0.2753507397801924,0.16865328786434888,0.23677009480888966,False
+457,"log_gdp_per_capita, log_total_citations, uhc_index, trust_scientists",-0.2947242943068849,0.13349601471269998,0.23991307474750645,False
+458,"log_gdp_per_capita, log_total_citations, log_medical_school, hdi",-0.3107470278236449,0.22613308778129984,0.2675458442008841,False
+459,"log_gdp_per_capita, log_total_citations, log_medical_school, democracy_index",-0.4596194415646476,0.00017733326778635874,0.26639744050981784,False
+460,"log_gdp_per_capita, log_total_citations, log_medical_school, altruism",-0.4716128411789032,0.00010404253402408624,0.26560297665600197,False
+461,"log_gdp_per_capita, log_total_citations, log_medical_school, trust_scientists",-0.4355939237755305,0.0006778121922182242,0.26789361733798156,False
+462,"log_gdp_per_capita, log_total_citations, sanitation, hdi",-0.24676206375297893,0.3557649204232307,0.23558115252317258,False
+463,"log_gdp_per_capita, log_total_citations, sanitation, democracy_index",-0.4126482416575583,0.011822233793412297,0.2332681955121626,False
+464,"log_gdp_per_capita, log_total_citations, sanitation, altruism",-0.40431209230942733,0.012589687012072751,0.23334297816643634,False
+465,"log_gdp_per_capita, log_total_citations, sanitation, trust_scientists",-0.3796109619882193,0.017780612453862567,0.23904814752594572,False
+466,"log_gdp_per_capita, log_researchers_per_million, log_health_expenditure_per_capita, hdi",-0.960161149526498,0.010693948383946857,0.06661304660303757,False
+467,"log_gdp_per_capita, log_researchers_per_million, log_health_expenditure_per_capita, democracy_index",-1.0386106434563964,0.00558234920326019,0.06296696479392117,False
+468,"log_gdp_per_capita, log_researchers_per_million, log_health_expenditure_per_capita, altruism",-1.0673286264773842,0.0032569754254198934,0.06286180907975203,False
+469,"log_gdp_per_capita, log_researchers_per_million, log_health_expenditure_per_capita, trust_scientists",-1.0841686844549943,0.002606198364861434,0.06697693345533773,False
+470,"log_gdp_per_capita, log_researchers_per_million, log_hospital_beds_per_capita, hdi",-0.05669082126681411,0.8402984835877744,0.1972347746300156,False
+471,"log_gdp_per_capita, log_researchers_per_million, log_hospital_beds_per_capita, democracy_index",-0.17561269655549044,0.31088801452456855,0.21999457778104536,False
+472,"log_gdp_per_capita, log_researchers_per_million, log_hospital_beds_per_capita, altruism",-0.12396442472833646,0.49672881119873524,0.19825854897558193,False
+473,"log_gdp_per_capita, log_researchers_per_million, log_hospital_beds_per_capita, trust_scientists",-0.06868725048384532,0.6920289533186391,0.2007954607849769,False
+474,"log_gdp_per_capita, log_researchers_per_million, log_doctors_per_10k, hdi",-0.4753898618633713,0.11130884442603604,0.0800259978681288,False
+475,"log_gdp_per_capita, log_researchers_per_million, log_doctors_per_10k, democracy_index",-0.09227753337671313,0.6781696400634409,0.06693244937704046,False
+476,"log_gdp_per_capita, log_researchers_per_million, log_doctors_per_10k, altruism",-0.017193914524732422,0.9432762409202218,0.05731082687424194,False
+477,"log_gdp_per_capita, log_researchers_per_million, log_doctors_per_10k, trust_scientists",-0.03434918439861284,0.8763246098716753,0.05741321253216369,False
+478,"log_gdp_per_capita, log_researchers_per_million, uhc_index, hdi",-0.3909271382237652,0.19671241164679465,0.04163957826784781,False
+479,"log_gdp_per_capita, log_researchers_per_million, uhc_index, democracy_index",-0.23599776657065777,0.33449282096069277,0.04455874428258477,False
+480,"log_gdp_per_capita, log_researchers_per_million, uhc_index, altruism",-0.21279630958501822,0.39832923659184527,0.03587953704358804,False
+481,"log_gdp_per_capita, log_researchers_per_million, uhc_index, trust_scientists",-0.19938340051349746,0.4181425045378726,0.03555341787377109,False
+482,"log_gdp_per_capita, log_researchers_per_million, log_medical_school, hdi",-0.35763305554333696,0.2418003258673136,0.034881377742776665,False
+483,"log_gdp_per_capita, log_researchers_per_million, log_medical_school, democracy_index",-0.36036222832102355,0.0578467427627794,0.04388846650614264,False
+484,"log_gdp_per_capita, log_researchers_per_million, log_medical_school, altruism",-0.32226221032518587,0.10335539937494945,0.03506266457146723,False
+485,"log_gdp_per_capita, log_researchers_per_million, log_medical_school, trust_scientists",-0.28440493768945835,0.1293041031488467,0.03654349588343797,False
+486,"log_gdp_per_capita, log_researchers_per_million, sanitation, hdi",-0.40038302962162187,0.19302145816266145,0.03382977959156863,False
+487,"log_gdp_per_capita, log_researchers_per_million, sanitation, democracy_index",-0.40897085060907534,0.05261507958309064,0.04186797590938496,False
+488,"log_gdp_per_capita, log_researchers_per_million, sanitation, altruism",-0.3728597426042711,0.08417259852908646,0.034008930458230724,False
+489,"log_gdp_per_capita, log_researchers_per_million, sanitation, trust_scientists",-0.3539579726862244,0.08795802021260095,0.03558289257523528,False
+490,"log_population, rd_expenditure, log_health_expenditure_per_capita, hdi",,,0.3696487870794313,False
+491,"log_population, rd_expenditure, log_health_expenditure_per_capita, democracy_index",,,0.3713237974575948,False
+492,"log_population, rd_expenditure, log_health_expenditure_per_capita, altruism",,,0.3600484689121539,False
+493,"log_population, rd_expenditure, log_health_expenditure_per_capita, trust_scientists",,,0.368879315057811,False
+494,"log_population, rd_expenditure, log_hospital_beds_per_capita, hdi",,,0.36189729113519953,False
+495,"log_population, rd_expenditure, log_hospital_beds_per_capita, democracy_index",,,0.3774785124144149,False
+496,"log_population, rd_expenditure, log_hospital_beds_per_capita, altruism",,,0.3636509010542601,False
+497,"log_population, rd_expenditure, log_hospital_beds_per_capita, trust_scientists",,,0.365101141519259,False
+498,"log_population, rd_expenditure, log_doctors_per_10k, hdi",,,0.38948617604995295,False
+499,"log_population, rd_expenditure, log_doctors_per_10k, democracy_index",,,0.38760630769444526,False
+500,"log_population, rd_expenditure, log_doctors_per_10k, altruism",,,0.36832540046280837,False
+501,"log_population, rd_expenditure, log_doctors_per_10k, trust_scientists",,,0.36757303126257135,False
+502,"log_population, rd_expenditure, uhc_index, hdi",,,0.36037230570444323,False
+503,"log_population, rd_expenditure, uhc_index, democracy_index",,,0.375349397141845,False
+504,"log_population, rd_expenditure, uhc_index, altruism",,,0.36121946221155776,False
+505,"log_population, rd_expenditure, uhc_index, trust_scientists",,,0.36384880271451236,False
+506,"log_population, rd_expenditure, log_medical_school, hdi",,,0.4534330919924324,False
+507,"log_population, rd_expenditure, log_medical_school, democracy_index",,,0.4701553677686804,False
+508,"log_population, rd_expenditure, log_medical_school, altruism",,,0.44735312072927436,False
+509,"log_population, rd_expenditure, log_medical_school, trust_scientists",,,0.440582707143395,False
+510,"log_population, rd_expenditure, sanitation, hdi",,,0.36042639356315476,False
+511,"log_population, rd_expenditure, sanitation, democracy_index",,,0.37501977423791966,False
+512,"log_population, rd_expenditure, sanitation, altruism",,,0.362319488282542,False
+513,"log_population, rd_expenditure, sanitation, trust_scientists",,,0.3639767289623541,False
+514,"log_population, log_total_publications, log_health_expenditure_per_capita, hdi",,,0.33637930208538047,False
+515,"log_population, log_total_publications, log_health_expenditure_per_capita, democracy_index",,,0.34816680640040376,False
+516,"log_population, log_total_publications, log_health_expenditure_per_capita, altruism",,,0.3263941691759783,False
+517,"log_population, log_total_publications, log_health_expenditure_per_capita, trust_scientists",,,0.33135603306990813,False
+518,"log_population, log_total_publications, log_hospital_beds_per_capita, hdi",,,0.3176532574107238,False
+519,"log_population, log_total_publications, log_hospital_beds_per_capita, democracy_index",,,0.345956663340106,False
+520,"log_population, log_total_publications, log_hospital_beds_per_capita, altruism",,,0.31689083477709157,False
+521,"log_population, log_total_publications, log_hospital_beds_per_capita, trust_scientists",,,0.31418409505486733,False
+522,"log_population, log_total_publications, log_doctors_per_10k, hdi",,,0.3679376170329911,False
+523,"log_population, log_total_publications, log_doctors_per_10k, democracy_index",,,0.35517290328364315,False
+524,"log_population, log_total_publications, log_doctors_per_10k, altruism",,,0.3217575415385454,False
+525,"log_population, log_total_publications, log_doctors_per_10k, trust_scientists",,,0.31949650094309967,False
+526,"log_population, log_total_publications, uhc_index, hdi",,,0.3216285299682894,False
+527,"log_population, log_total_publications, uhc_index, democracy_index",,,0.34416692554880324,False
+528,"log_population, log_total_publications, uhc_index, altruism",,,0.31543889888486343,False
+529,"log_population, log_total_publications, uhc_index, trust_scientists",,,0.3134788472005484,False
+530,"log_population, log_total_publications, log_medical_school, hdi",,,0.44677823096749714,False
+531,"log_population, log_total_publications, log_medical_school, democracy_index",,,0.466296180779297,False
+532,"log_population, log_total_publications, log_medical_school, altruism",,,0.4431050667593782,False
+533,"log_population, log_total_publications, log_medical_school, trust_scientists",,,0.43814313853101294,False
+534,"log_population, log_total_publications, sanitation, hdi",,,0.31397720674533014,False
+535,"log_population, log_total_publications, sanitation, democracy_index",,,0.34370479298732615,False
+536,"log_population, log_total_publications, sanitation, altruism",,,0.3156474862693537,False
+537,"log_population, log_total_publications, sanitation, trust_scientists",,,0.315146609093776,False
+538,"log_population, log_total_citations, log_health_expenditure_per_capita, hdi",,,0.34416874151600063,False
+539,"log_population, log_total_citations, log_health_expenditure_per_capita, democracy_index",,,0.3492837306911697,False
+540,"log_population, log_total_citations, log_health_expenditure_per_capita, altruism",,,0.33199417343958126,False
+541,"log_population, log_total_citations, log_health_expenditure_per_capita, trust_scientists",,,0.33861646490837827,False
+542,"log_population, log_total_citations, log_hospital_beds_per_capita, hdi",,,0.3293472708823869,False
+543,"log_population, log_total_citations, log_hospital_beds_per_capita, democracy_index",,,0.3515159192158027,False
+544,"log_population, log_total_citations, log_hospital_beds_per_capita, altruism",,,0.33058732790329226,False
+545,"log_population, log_total_citations, log_hospital_beds_per_capita, trust_scientists",,,0.3306051948887371,False
+546,"log_population, log_total_citations, log_doctors_per_10k, hdi",,,0.3719899976814173,False
+547,"log_population, log_total_citations, log_doctors_per_10k, democracy_index",,,0.36344246222769216,False
+548,"log_population, log_total_citations, log_doctors_per_10k, altruism",,,0.3387924072586228,False
+549,"log_population, log_total_citations, log_doctors_per_10k, trust_scientists",,,0.3377832184889068,False
+550,"log_population, log_total_citations, uhc_index, hdi",,,0.3318902895581278,False
+551,"log_population, log_total_citations, uhc_index, democracy_index",,,0.3501488040832762,False
+552,"log_population, log_total_citations, uhc_index, altruism",,,0.3294441676048606,False
+553,"log_population, log_total_citations, uhc_index, trust_scientists",,,0.32944253861129147,False
+554,"log_population, log_total_citations, log_medical_school, hdi",,,0.4586311609930913,False
+555,"log_population, log_total_citations, log_medical_school, democracy_index",,,0.47462457696178995,False
+556,"log_population, log_total_citations, log_medical_school, altruism",,,0.45832369778111115,False
+557,"log_population, log_total_citations, log_medical_school, trust_scientists",,,0.4538352758805241,False
+558,"log_population, log_total_citations, sanitation, hdi",,,0.3262087485011024,False
+559,"log_population, log_total_citations, sanitation, democracy_index",,,0.34791747825331365,False
+560,"log_population, log_total_citations, sanitation, altruism",,,0.32787959729894567,False
+561,"log_population, log_total_citations, sanitation, trust_scientists",,,0.329687396599319,False
+562,"log_population, log_researchers_per_million, log_health_expenditure_per_capita, hdi",,,0.3410264591060669,False
+563,"log_population, log_researchers_per_million, log_health_expenditure_per_capita, democracy_index",,,0.3583424338205482,False
+564,"log_population, log_researchers_per_million, log_health_expenditure_per_capita, altruism",,,0.3354263204235983,False
+565,"log_population, log_researchers_per_million, log_health_expenditure_per_capita, trust_scientists",,,0.33747013443420604,False
+566,"log_population, log_researchers_per_million, log_hospital_beds_per_capita, hdi",,,0.3101725312105771,False
+567,"log_population, log_researchers_per_million, log_hospital_beds_per_capita, democracy_index",,,0.3430914183492265,False
+568,"log_population, log_researchers_per_million, log_hospital_beds_per_capita, altruism",,,0.3031812707804329,False
+569,"log_population, log_researchers_per_million, log_hospital_beds_per_capita, trust_scientists",,,0.2959348356682884,False
+570,"log_population, log_researchers_per_million, log_doctors_per_10k, hdi",,,0.3675877408566477,False
+571,"log_population, log_researchers_per_million, log_doctors_per_10k, democracy_index",,,0.3536494943105005,False
+572,"log_population, log_researchers_per_million, log_doctors_per_10k, altruism",,,0.3088739045162736,False
+573,"log_population, log_researchers_per_million, log_doctors_per_10k, trust_scientists",,,0.3026602543780552,False
+574,"log_population, log_researchers_per_million, uhc_index, hdi",,,0.31730383932242656,False
+575,"log_population, log_researchers_per_million, uhc_index, democracy_index",,,0.34179894235104835,False
+576,"log_population, log_researchers_per_million, uhc_index, altruism",,,0.30257907694834074,False
+577,"log_population, log_researchers_per_million, uhc_index, trust_scientists",,,0.2971061174767097,False
+578,"log_population, log_researchers_per_million, log_medical_school, hdi",,,0.43075246517881505,False
+579,"log_population, log_researchers_per_million, log_medical_school, democracy_index",,,0.45059329769841816,False
+580,"log_population, log_researchers_per_million, log_medical_school, altruism",,,0.4092218142944729,False
+581,"log_population, log_researchers_per_million, log_medical_school, trust_scientists",,,0.39692670929874485,False
+582,"log_population, log_researchers_per_million, sanitation, hdi",,,0.3074342314218216,False
+583,"log_population, log_researchers_per_million, sanitation, democracy_index",,,0.34372832588941216,False
+584,"log_population, log_researchers_per_million, sanitation, altruism",,,0.30469904051969876,False
+585,"log_population, log_researchers_per_million, sanitation, trust_scientists",,,0.3006726358082682,False
+586,"foreign_aid_received, rd_expenditure, log_health_expenditure_per_capita, hdi",,,0.19397419487517698,False
+587,"foreign_aid_received, rd_expenditure, log_health_expenditure_per_capita, democracy_index",,,0.17388141316008643,False
+588,"foreign_aid_received, rd_expenditure, log_health_expenditure_per_capita, altruism",,,0.1749894176520489,False
+589,"foreign_aid_received, rd_expenditure, log_health_expenditure_per_capita, trust_scientists",,,0.18003451719151764,False
+590,"foreign_aid_received, rd_expenditure, log_hospital_beds_per_capita, hdi",,,0.2824728405408712,False
+591,"foreign_aid_received, rd_expenditure, log_hospital_beds_per_capita, democracy_index",,,0.2496687830187655,False
+592,"foreign_aid_received, rd_expenditure, log_hospital_beds_per_capita, altruism",,,0.2501580847166225,False
+593,"foreign_aid_received, rd_expenditure, log_hospital_beds_per_capita, trust_scientists",,,0.27740802724773883,False
+594,"foreign_aid_received, rd_expenditure, log_doctors_per_10k, hdi",,,0.19782824610545424,False
+595,"foreign_aid_received, rd_expenditure, log_doctors_per_10k, democracy_index",,,0.19585149988164363,False
+596,"foreign_aid_received, rd_expenditure, log_doctors_per_10k, altruism",,,0.2010957126973314,False
+597,"foreign_aid_received, rd_expenditure, log_doctors_per_10k, trust_scientists",,,0.1962011679715756,False
+598,"foreign_aid_received, rd_expenditure, uhc_index, hdi",,,0.1920504226568337,False
+599,"foreign_aid_received, rd_expenditure, uhc_index, democracy_index",,,0.1813151133541212,False
+600,"foreign_aid_received, rd_expenditure, uhc_index, altruism",,,0.1824019613766259,False
+601,"foreign_aid_received, rd_expenditure, uhc_index, trust_scientists",,,0.18303313444735214,False
+602,"foreign_aid_received, rd_expenditure, log_medical_school, hdi",,,0.19251582950362378,False
+603,"foreign_aid_received, rd_expenditure, log_medical_school, democracy_index",,,0.14773232812567771,False
+604,"foreign_aid_received, rd_expenditure, log_medical_school, altruism",,,0.1482033860040407,False
+605,"foreign_aid_received, rd_expenditure, log_medical_school, trust_scientists",,,0.16696048682826303,False
+606,"foreign_aid_received, rd_expenditure, sanitation, hdi",,,0.19426541291044386,False
+607,"foreign_aid_received, rd_expenditure, sanitation, democracy_index",,,0.17595521976150907,False
+608,"foreign_aid_received, rd_expenditure, sanitation, altruism",,,0.17579191861386867,False
+609,"foreign_aid_received, rd_expenditure, sanitation, trust_scientists",,,0.18048146389094455,False
+610,"foreign_aid_received, log_total_publications, log_health_expenditure_per_capita, hdi",,,0.22910759965794059,False
+611,"foreign_aid_received, log_total_publications, log_health_expenditure_per_capita, democracy_index",,,0.2047040981129289,False
+612,"foreign_aid_received, log_total_publications, log_health_expenditure_per_capita, altruism",,,0.20366904768464356,False
+613,"foreign_aid_received, log_total_publications, log_health_expenditure_per_capita, trust_scientists",,,0.212413132603974,False
+614,"foreign_aid_received, log_total_publications, log_hospital_beds_per_capita, hdi",,,0.2557662434762643,False
+615,"foreign_aid_received, log_total_publications, log_hospital_beds_per_capita, democracy_index",,,0.23915243343962989,False
+616,"foreign_aid_received, log_total_publications, log_hospital_beds_per_capita, altruism",,,0.23749638162020892,False
+617,"foreign_aid_received, log_total_publications, log_hospital_beds_per_capita, trust_scientists",,,0.2561393777817196,False
+618,"foreign_aid_received, log_total_publications, log_doctors_per_10k, hdi",,,0.240135237780019,False
+619,"foreign_aid_received, log_total_publications, log_doctors_per_10k, democracy_index",,,0.24138184400236662,False
+620,"foreign_aid_received, log_total_publications, log_doctors_per_10k, altruism",,,0.24130524937224118,False
+621,"foreign_aid_received, log_total_publications, log_doctors_per_10k, trust_scientists",,,0.2396636575367055,False
+622,"foreign_aid_received, log_total_publications, uhc_index, hdi",,,0.22293054587001093,False
+623,"foreign_aid_received, log_total_publications, uhc_index, democracy_index",,,0.22252549025335255,False
+624,"foreign_aid_received, log_total_publications, uhc_index, altruism",,,0.22154939443835264,False
+625,"foreign_aid_received, log_total_publications, uhc_index, trust_scientists",,,0.223443605559017,False
+626,"foreign_aid_received, log_total_publications, log_medical_school, hdi",,,0.2618166138702408,False
+627,"foreign_aid_received, log_total_publications, log_medical_school, democracy_index",,,0.22234113981427894,False
+628,"foreign_aid_received, log_total_publications, log_medical_school, altruism",,,0.22090948790655696,False
+629,"foreign_aid_received, log_total_publications, log_medical_school, trust_scientists",,,0.23506868652948154,False
+630,"foreign_aid_received, log_total_publications, sanitation, hdi",,,0.22086342750150234,False
+631,"foreign_aid_received, log_total_publications, sanitation, democracy_index",,,0.205108043814192,False
+632,"foreign_aid_received, log_total_publications, sanitation, altruism",,,0.20550656798155553,False
+633,"foreign_aid_received, log_total_publications, sanitation, trust_scientists",,,0.21362172094642384,False
+634,"foreign_aid_received, log_total_citations, log_health_expenditure_per_capita, hdi",,,0.23701867376874874,False
+635,"foreign_aid_received, log_total_citations, log_health_expenditure_per_capita, democracy_index",,,0.2111120136010719,False
+636,"foreign_aid_received, log_total_citations, log_health_expenditure_per_capita, altruism",,,0.21192594197004688,False
+637,"foreign_aid_received, log_total_citations, log_health_expenditure_per_capita, trust_scientists",,,0.22048301375107882,False
+638,"foreign_aid_received, log_total_citations, log_hospital_beds_per_capita, hdi",,,0.2729819141935107,False
+639,"foreign_aid_received, log_total_citations, log_hospital_beds_per_capita, democracy_index",,,0.24524593692400398,False
+640,"foreign_aid_received, log_total_citations, log_hospital_beds_per_capita, altruism",,,0.24557146492701243,False
+641,"foreign_aid_received, log_total_citations, log_hospital_beds_per_capita, trust_scientists",,,0.26939706771842664,False
+642,"foreign_aid_received, log_total_citations, log_doctors_per_10k, hdi",,,0.24590781340768775,False
+643,"foreign_aid_received, log_total_citations, log_doctors_per_10k, democracy_index",,,0.2457410727419067,False
+644,"foreign_aid_received, log_total_citations, log_doctors_per_10k, altruism",,,0.25027300318322043,False
+645,"foreign_aid_received, log_total_citations, log_doctors_per_10k, trust_scientists",,,0.2463847338427032,False
+646,"foreign_aid_received, log_total_citations, uhc_index, hdi",,,0.2330726243081771,False
+647,"foreign_aid_received, log_total_citations, uhc_index, democracy_index",,,0.22809559912403,False
+648,"foreign_aid_received, log_total_citations, uhc_index, altruism",,,0.22893410350813015,False
+649,"foreign_aid_received, log_total_citations, uhc_index, trust_scientists",,,0.2307421109642529,False
+650,"foreign_aid_received, log_total_citations, log_medical_school, hdi",,,0.26280729334371533,False
+651,"foreign_aid_received, log_total_citations, log_medical_school, democracy_index",,,0.21288217479598914,False
+652,"foreign_aid_received, log_total_citations, log_medical_school, altruism",,,0.20838103364475846,False
+653,"foreign_aid_received, log_total_citations, log_medical_school, trust_scientists",,,0.22565729935162315,False
+654,"foreign_aid_received, log_total_citations, sanitation, hdi",,,0.2321984644687255,False
+655,"foreign_aid_received, log_total_citations, sanitation, democracy_index",,,0.20882279749277188,False
+656,"foreign_aid_received, log_total_citations, sanitation, altruism",,,0.20932308096117758,False
+657,"foreign_aid_received, log_total_citations, sanitation, trust_scientists",,,0.21842834312195003,False
+658,"foreign_aid_received, log_researchers_per_million, log_health_expenditure_per_capita, hdi",,,0.041767265821125554,False
+659,"foreign_aid_received, log_researchers_per_million, log_health_expenditure_per_capita, democracy_index",,,0.026903065357110845,False
+660,"foreign_aid_received, log_researchers_per_million, log_health_expenditure_per_capita, altruism",,,0.02166419375013895,False
+661,"foreign_aid_received, log_researchers_per_million, log_health_expenditure_per_capita, trust_scientists",,,0.023130983578248387,False
+662,"foreign_aid_received, log_researchers_per_million, log_hospital_beds_per_capita, hdi",,,0.19746162890817454,False
+663,"foreign_aid_received, log_researchers_per_million, log_hospital_beds_per_capita, democracy_index",,,0.21799554982248937,False
+664,"foreign_aid_received, log_researchers_per_million, log_hospital_beds_per_capita, altruism",,,0.19740630647543222,False
+665,"foreign_aid_received, log_researchers_per_million, log_hospital_beds_per_capita, trust_scientists",,,0.20137676934249804,False
+666,"foreign_aid_received, log_researchers_per_million, log_doctors_per_10k, hdi",,,0.0772279521494087,False
+667,"foreign_aid_received, log_researchers_per_million, log_doctors_per_10k, democracy_index",,,0.07834792843549088,False
+668,"foreign_aid_received, log_researchers_per_million, log_doctors_per_10k, altruism",,,0.0710577600870459,False
+669,"foreign_aid_received, log_researchers_per_million, log_doctors_per_10k, trust_scientists",,,0.07158713101404846,False
+670,"foreign_aid_received, log_researchers_per_million, uhc_index, hdi",,,0.039609053809931294,False
+671,"foreign_aid_received, log_researchers_per_million, uhc_index, democracy_index",,,0.04661983289365823,False
+672,"foreign_aid_received, log_researchers_per_million, uhc_index, altruism",,,0.03945881832543263,False
+673,"foreign_aid_received, log_researchers_per_million, uhc_index, trust_scientists",,,0.03952925201830215,False
+674,"foreign_aid_received, log_researchers_per_million, log_medical_school, hdi",,,0.0335289031207473,False
+675,"foreign_aid_received, log_researchers_per_million, log_medical_school, democracy_index",,,0.026719585659258582,False
+676,"foreign_aid_received, log_researchers_per_million, log_medical_school, altruism",,,0.023538310511073246,False
+677,"foreign_aid_received, log_researchers_per_million, log_medical_school, trust_scientists",,,0.026146148924299784,False
+678,"foreign_aid_received, log_researchers_per_million, sanitation, hdi",,,0.032444608440296174,False
+679,"foreign_aid_received, log_researchers_per_million, sanitation, democracy_index",,,0.024916204904160577,False
+680,"foreign_aid_received, log_researchers_per_million, sanitation, altruism",,,0.02171443308425247,False
+681,"foreign_aid_received, log_researchers_per_million, sanitation, trust_scientists",,,0.023048860128976112,False

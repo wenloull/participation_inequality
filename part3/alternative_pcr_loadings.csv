@@ -1,0 +1,16 @@
+Block,Variable,Loading_on_PC1
+Economic,log_gdp_per_capita,-0.7122060551491519
+Economic,log_population,0.04347322529558763
+Economic,foreign_aid_received,0.7006230182425367
+Research,rd_expenditure,0.4820034988496101
+Research,log_total_publications,0.5248783423681228
+Research,log_total_citations,0.5335877006179794
+Research,log_researchers_per_million,0.45547724263550604
+Health,log_health_expenditure_per_capita,0.579422097798196
+Health,uhc_index,0.5794931845661649
+Health,log_medical_school,0.19038740227644485
+Health,sanitation,0.5405648145032469
+Governance,hdi,0.5800375222530012
+Governance,democracy_index,0.5073981831368968
+Governance,altruism,0.35132792057300677
+Governance,trust_scientists,0.5316693039416726

@@ -1,0 +1,4 @@
+Block,Variables,HVP_R2_Contribution,HVP_Pct_Contribution,Shapley_R2_Contribution,Shapley_Pct_Contribution
+Research,"rd_expenditure, log_total_publications, log_total_citations, log_researchers_per_million",0.11225794507196096,44.1098029104285,0.10208073562278172,40.11084584156644
+Health,"log_health_expenditure_per_capita, uhc_index, log_medical_school, sanitation",0.1301620919559584,51.14492536725091,0.11659248826060178,45.812986107262574
+Governance,"hdi, democracy_index, altruism, trust_scientists",0.012076554806592754,4.74527172232059,0.035823367951128594,14.076168051170976

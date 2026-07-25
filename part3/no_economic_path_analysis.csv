@@ -1,0 +1,8 @@
+Path,Effect,Type
+Research -> PBR (Direct),0.1672910369752699,Direct
+Research -> Health -> PBR,-0.09662232870214274,Indirect
+Research (Total Effect),0.07066870827312716,Total
+Health -> PBR (Direct),-0.34305272675514853,Direct
+Governance -> PBR (Direct),0.2578965463169988,Direct
+Governance -> Health -> PBR,-0.2392022178120924,Indirect
+Governance (Total Effect),0.018694328504906432,Total

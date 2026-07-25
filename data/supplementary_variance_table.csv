@@ -1,0 +1,11 @@
+Factor,Variable_code,Partial_R2,CI_Lower_95,CI_Upper_95,Pct_of_Total_Variance
+GDP (log),log_gdp,0.0379,0.0306,0.0454,3.79
+Scientific Publications per capita (log),log_publications_per_capita,0.0192,0.0151,0.0239,1.92
+R&D Expenditure (% GDP),rd_expenditure,0.017,0.0131,0.0216,1.7
+"Physicians per 10,000 population",doctors_per_10k,0.0159,0.0122,0.0202,1.59
+"Hospital Beds per 1,000 population",hospital_beds_per_capita,0.0051,0.0033,0.0072,0.51
+Human Development Index (HDI),hdi,0.002,0.0009,0.0036,0.2
+Democracy Index,democracy_index,0.0017,0.0007,0.0029,0.17
+Health Expenditure per capita (log),log_health_exp_per_capita,0.0001,0.0,0.0009,0.01
+Full model (all factors combined),full_model,0.2644,0.2518,0.2786,26.44
+Unexplained variance (residual),residual,0.7356,0.7214,0.7482,73.56

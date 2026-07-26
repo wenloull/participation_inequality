@@ -38,10 +38,16 @@ def load_and_prepare_data():
     
     # Load clinical trial data and causes
     pmid_cause = pd.read_csv('/Users/wen/Desktop/participation_inequality/CauseClassier/pmid_cause.csv')
-    geoinfor = pd.read_csv('/Users/wen/Desktop/participation_inequality/public/geoinfor183_disease_matched.csv')
+    geoinfor = pd.read_csv('/Users/wen/Desktop/participation_inequality/rerun the country/geoinfor_195k.csv')
     year_data = pd.read_csv('/Users/wen/Desktop/participation_inequality/data/year_195k.csv')
     gbddisease = pd.read_csv('/Users/wen/Desktop/participation_inequality/data/gbddisease.csv')
     all_about_country = pd.read_csv('/Users/wen/Desktop/participation_inequality/data/AllAboutCountry.csv')
+
+    # Filter strictly to the unified 180 countries
+    unified_countries = pd.read_csv('/Users/wen/Desktop/participation_inequality/analysiswoold/unified_180_countries.csv')['ISO3'].unique()
+    geoinfor = geoinfor[geoinfor['ISO3'].isin(unified_countries)]
+    gbddisease = gbddisease[gbddisease['ISO3'].isin(unified_countries)]
+    all_about_country = all_about_country[all_about_country['ISO3'].isin(unified_countries)]
 
     # Filter cause mapping to Level 2 and custom 16 diseases
     pmid_cause_l2 = pmid_cause[
@@ -263,7 +269,7 @@ def run_regression_and_classify(disease_merged, country_vars_scaled, predictors)
     conditions = [
         (cd_df['Residual'] > 0.9 * cd_df['residual_sd']),
         (cd_df['Residual'] < -0.5 * cd_df['residual_sd']),
-        (cd_df['Residual'] >= -0.1 * cd_df['residual_sd']) & (cd_df['Residual'] <= 0.1 * cd_df['residual_sd'])
+        (cd_df['Residual'].abs() <= 0.1 * cd_df['residual_sd'])
     ]
     choices = ['Over_Performing', 'Under', 'As_Expected']
     cd_df['Status'] = np.select(conditions, choices, default='Borderline')
@@ -386,15 +392,15 @@ def main():
     disease_merged, country_vars_scaled, predictors = load_and_prepare_data()
     df = run_regression_and_classify(disease_merged, country_vars_scaled, predictors)
     
-    OUTPUT_DIR = '/Users/wen/Desktop/participation_inequality/public'
+    OUTPUT_DIR = '/Users/wen/Desktop/participation_inequality/analysiswoold'
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     
     # Save updated dataset
     df.to_csv(os.path.join(OUTPUT_DIR, 'APP_visual_factor_updated.csv'), index=False)
     
-    # Add public path to search path so we can import intervention_local
-    sys.path.append('/Users/wen/Desktop/participation_inequality/public')
-    from intervention_local import create_network_data, create_3x2_visualization
+    # Add workspace path to search path so we can import scripts.intervention
+    sys.path.append('/Users/wen/Desktop/participation_inequality')
+    from scripts.intervention import create_network_data, create_3x2_visualization
     
     # 2. Create network using original function
     nodes_df, edges_df = create_network_data(df)
@@ -411,7 +417,7 @@ def main():
     create_3x2_visualization(df, nodes_df, edges_df)
     
     print("\n" + "=" * 80)
-    print("COMPLETED SUCCESSFUL GENERATION USING ORIGINAL LAYOUT AND VISUAL EFFECTS IN analysis/rq4_results/!")
+    print("COMPLETED SUCCESSFUL GENERATION USING ORIGINAL LAYOUT AND VISUAL EFFECTS IN analysiswoold/!")
     print("=" * 80)
 
 if __name__ == "__main__":

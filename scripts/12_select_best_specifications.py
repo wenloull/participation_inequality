@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 from itertools import combinations
 
 # Load prepared data from sensitivity_analysis.py
-from sensitivity_analysis import load_and_prepare_data, OUTPUT_DIR
+from analysiswoold.sensitivity_analysis import load_and_prepare_data, OUTPUT_DIR
 
 def run_search():
     print("="*80)

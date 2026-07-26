@@ -80,8 +80,8 @@ def create_panel_a_maps(participant_data, gbddisease, df_cmap, axes):
 
     # Load world shapefile
     try:
-        world_geojson = "/Users/wen/Desktop/participation_inequality/data/ne_110m_admin_0_countries.geojson"
-        world = gpd.read_file(world_geojson)
+        world_url = "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson"
+        world = gpd.read_file(world_url)
     except Exception as e:
         print(f"Warning: Could not load world shapefile: {e}")
         return
@@ -534,13 +534,13 @@ def main():
 
     # Paths
     pmid_cause_path = "/Users/wen/Desktop/participation_inequality/CauseClassier/pmid_cause.csv"
-    geoinfor_path = "/Users/wen/Desktop/participation_inequality/public/geoinfor183_disease_matched.csv"
+    geoinfor_path = "/Users/wen/Desktop/participation_inequality/analysiswoold/geoinfor195kwoold.csv"
     year_path = "/Users/wen/Desktop/participation_inequality/data/year_195k.csv"
     gbd_path = "/Users/wen/Desktop/participation_inequality/data/gbddisease.csv"
     c_map_path = "/Users/wen/Desktop/participation_inequality/data/country_mapping_for_figure.csv"
     all_about_path = "/Users/wen/Desktop/participation_inequality/data/AllAboutCountry.csv"
     disease_mapping_path = "/Users/wen/Desktop/participation_inequality/data/disease_mapping.csv"
-    output_dir = "/Users/wen/Desktop/participation_inequality/public"
+    output_dir = "/Users/wen/Desktop/participation_inequality/analysiswoold"
     os.makedirs(output_dir, exist_ok=True)
 
     print("Loading datasets...")
@@ -595,6 +595,11 @@ def main():
     
     participant_data = participant_data[~participant_data['ISO3'].isin(countries_to_delete)]
     df_gbd = df_gbd[~df_gbd['ISO3'].isin(countries_to_delete)]
+
+    # Filter to unified 180 countries matching strict intersection
+    unified_countries = pd.read_csv("/Users/wen/Desktop/participation_inequality/analysiswoold/unified_180_countries.csv")['ISO3'].unique()
+    participant_data = participant_data[participant_data['ISO3'].isin(unified_countries)]
+    df_gbd = df_gbd[df_gbd['ISO3'].isin(unified_countries)]
 
     # Map Income Group to trial data
     participant_data = participant_data.merge(income_grid[['ISO3', 'Year', 'Income_Group']], left_on=['ISO3', 'YEAR'], right_on=['ISO3', 'Year'], how='left')

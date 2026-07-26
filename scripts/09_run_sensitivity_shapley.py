@@ -16,16 +16,16 @@ plt.rcParams['font.family'] = 'sans-serif'
 plt.rcParams['font.sans-serif'] = ['Arial', 'Helvetica', 'DejaVu Sans']
 
 # Output folder
-OUTPUT_DIR = 'public'
+OUTPUT_DIR = 'analysiswoold'
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # File paths
 FILES = {
-    'year_data': '/Users/wen/Desktop/participation_inequality/data/year_195k.csv',
-    'pmid_cause': '/Users/wen/Desktop/participation_inequality/CauseClassier/pmid_cause.csv',
-    'geoinfor': '/Users/wen/Desktop/participation_inequality/public/geoinfor183_disease_matched.csv',
-    'gbddisease': '/Users/wen/Desktop/participation_inequality/data/gbddisease.csv',
-    'all_about_country': '/Users/wen/Desktop/participation_inequality/data/AllAboutCountry.csv'
+    'year_data': 'data/year_195k.csv',
+    'pmid_cause': 'CauseClassier/pmid_cause.csv',
+    'geoinfor': 'analysiswoold/geoinfor195kwoold.csv',
+    'gbddisease': 'data/gbddisease.csv',
+    'all_about_country': 'data/AllAboutCountry.csv'
 }
 
 CUSTOM_DISEASES = [
@@ -69,7 +69,7 @@ def load_and_prepare_data():
     pmid_cause_l2 = pmid_cause[
         (pmid_cause['Level'] == 2) &
         (pmid_cause['CAUSE'].isin(CUSTOM_DISEASES))
-    ].copy()
+    ][['PMID', 'CAUSE']].drop_duplicates().copy()
 
     # 3. Merge clinical trials with geoinformation
     main_trials = year_data.merge(pmid_cause_l2, on='PMID', how='inner')
@@ -216,6 +216,11 @@ def load_and_prepare_data():
 
     # Merge PBR and predictors
     merged = country_sums.merge(country_vars_avg, on='ISO3', how='inner')
+    
+    # Filter to unified 180 countries matching strict intersection
+    unified_countries = pd.read_csv("/Users/wen/Desktop/participation_inequality/analysiswoold/unified_180_countries.csv")['ISO3'].unique()
+    merged = merged[merged['ISO3'].isin(unified_countries)]
+    
     print(f"  Merged data shape: {merged.shape}")
 
     # Identify predictors to keep
@@ -225,7 +230,7 @@ def load_and_prepare_data():
     
     # Impute missing predictor values using geo-income interacted median imputation
     # Load mapping file
-    mapping_df = pd.read_csv('/Users/wen/Desktop/participation_inequality/data/country_mapping_for_figure.csv')
+    mapping_df = pd.read_csv('data/country_mapping_for_figure.csv')
     merged = merged.merge(mapping_df[['ISO3', 'Subregion']], on='ISO3', how='left')
     
     # Map clean income groups

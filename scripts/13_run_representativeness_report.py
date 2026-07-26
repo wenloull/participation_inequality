@@ -36,7 +36,7 @@ DATASET_NAMES = {
     '195k': 'TotalRCT',
     '137k': 'DisTSub',
     '124k': 'GeoTSub',
-    '100k': 'DisGeoSub'
+    '78k': 'DisGeoSub'
 }
 
 # Dataset colors using mapped names
@@ -145,20 +145,49 @@ mesh_195k = pd.read_csv('data/mesh_195k.csv')
 # Load PMIDs defining the 5 levels
 pmid_301k = set(year_301k['PMID'])
 pmid_195k = set(year_195k['PMID'])
-pmid_137k = set(pd.read_csv('data/year_138k.csv')['PMID'])
 
-# New 124k dataset from public/geoinfor183_disease_matched.csv
-geoinfor183 = pd.read_csv('public/geoinfor183_disease_matched.csv')
-pmid_124k = set(geoinfor183['PMID'])
+# 137k dataset (DisTSub): PMIDs from CauseClassier/pmid_cause.csv
+pmid_cause = pd.read_csv('CauseClassier/pmid_cause.csv')
+pmid_137k = set(pmid_cause['PMID'])
 
-# 100k dataset (legacy DisGeoSub / complete subset)
-pmid_100k = set(pd.read_csv('data/year_99k.csv')['PMID'])
+# 124k dataset (GeoTSub): PMIDs from analysiswoold/geoinfor195kwoold.csv
+geoinfor_woold = pd.read_csv('analysiswoold/geoinfor195kwoold.csv')
+pmid_124k = set(geoinfor_woold['PMID'])
+
+# DisGeoSub dataset: Level 2 GBD causes (16 categories), 180 unified countries, 2000-2024, geoinfor_woold
+unified_180 = pd.read_csv('analysiswoold/unified_180_countries.csv')
+custom_diseases = [
+    'HIV/AIDS and sexually transmitted infections',
+    'Neglected tropical diseases and malaria',
+    'Nutritional deficiencies',
+    'Respiratory infections and tuberculosis',
+    'Maternal and neonatal disorders',
+    'Chronic respiratory diseases',
+    'Digestive diseases',
+    'Neurological disorders',
+    'Mental disorders',
+    'Neoplasms',
+    'Cardiovascular diseases',
+    'Substance use disorders',
+    'Diabetes and kidney diseases',
+    'Skin and subcutaneous diseases',
+    'Sense organ diseases',
+    'Musculoskeletal disorders'
+]
+
+df_cause_l2 = pmid_cause[(pmid_cause['Level'] == 2) & (pmid_cause['CAUSE'].isin(custom_diseases))][['PMID', 'CAUSE']].drop_duplicates()
+geo_180 = geoinfor_woold[geoinfor_woold['ISO3'].isin(unified_180['ISO3'])]
+year_2000_2024 = year_195k[(year_195k['YEAR'] >= 2000) & (year_195k['YEAR'] <= 2024)]
+
+study_data = df_cause_l2.merge(year_2000_2024, on='PMID', how='inner')
+participant_data = study_data.merge(geo_180, on='PMID', how='inner')
+pmid_78k = set(participant_data['PMID'])
 
 print(f"  • 301k (FullRCT):   {len(pmid_301k):,d} PMIDs")
 print(f"  • 195k (TotalRCT):  {len(pmid_195k):,d} PMIDs")
 print(f"  • 137k (DisTSub):   {len(pmid_137k):,d} PMIDs")
 print(f"  • 124k (GeoTSub):   {len(pmid_124k):,d} PMIDs")
-print(f"  • 100k (DisGeoSub): {len(pmid_100k):,d} PMIDs")
+print(f"  • DisGeoSub:        {len(pmid_78k):,d} PMIDs")
 
 # Construct files dictionary for each dataset level
 datasets_files = {
@@ -186,11 +215,11 @@ datasets_files = {
         'journal': journal_195k[journal_195k['PMID'].isin(pmid_124k)],
         'mesh': mesh_195k[mesh_195k['PMID'].isin(pmid_124k)]
     },
-    '100k': {
-        'year': year_195k[year_195k['PMID'].isin(pmid_100k)],
-        'author': author_195k[author_195k['PMID'].isin(pmid_100k)],
-        'journal': journal_195k[journal_195k['PMID'].isin(pmid_100k)],
-        'mesh': mesh_195k[mesh_195k['PMID'].isin(pmid_100k)]
+    '78k': {
+        'year': year_195k[year_195k['PMID'].isin(pmid_78k)],
+        'author': author_195k[(author_195k['PMID'].isin(pmid_78k)) & (author_195k['ISO3'].isin(unified_180['ISO3']))],
+        'journal': journal_195k[journal_195k['PMID'].isin(pmid_78k)],
+        'mesh': mesh_195k[mesh_195k['PMID'].isin(pmid_78k)]
     }
 }
 
@@ -211,7 +240,6 @@ for code, files in datasets_files.items():
     year_range = f"{y_df[year_col].min()}-{y_df[year_col].max()}"
     unique_years = y_df[year_col].nunique()
 
-    unique_countries = files['author']['ISO3'].nunique()
     unique_journals = files['journal']['TA'].nunique()
     unique_categories = files['journal']['Category'].nunique()
     mesh_col = 'treenumber' if 'treenumber' in files['mesh'].columns else 'Mesh'
@@ -223,7 +251,6 @@ for code, files in datasets_files.items():
         'Unique_Studies': unique_studies,
         'Year_Range': year_range,
         'Unique_Years': unique_years,
-        'Unique_Countries': unique_countries,
         'Unique_Journals': unique_journals,
         'Journal_Categories': unique_categories,
         'Unique_MeSH': unique_mesh
@@ -245,7 +272,7 @@ COMPARISONS = [
     ('301k', '195k', 'FullRCT vs TotalRCT'),
     ('195k', '137k', 'TotalRCT vs DisTSub'),
     ('195k', '124k', 'TotalRCT vs GeoTSub'),
-    ('195k', '100k', 'TotalRCT vs DisGeoSub')
+    ('195k', '78k', 'TotalRCT vs DisGeoSub')
 ]
 
 # --- 3.1 Year Analysis ---
@@ -534,12 +561,13 @@ ax1.tick_params(axis='x', rotation=45)
 for i, v in enumerate(overview_df['Unique_Studies']):
     ax1.text(i, v + max(overview_df['Unique_Studies'])*0.01, f'{v:,}', ha='center', va='bottom', fontweight='bold')
 
-ax2.bar(overview_df['Dataset'], overview_df['Unique_Countries'], color=colors_list)
-ax2.set_title('Number of Unique Countries by Dataset', fontsize=14, fontweight='bold')
-ax2.set_ylabel('Number of Countries')
+country_counts = [datasets_files[code]['author']['ISO3'].nunique() for code in overview_df['Dataset_Code']]
+ax2.bar(overview_df['Dataset'], country_counts, color=colors_list)
+ax2.set_title('Number of Author ISO3 Regions by Dataset', fontsize=14, fontweight='bold')
+ax2.set_ylabel('Number of ISO3 Codes')
 ax2.tick_params(axis='x', rotation=45)
-for i, v in enumerate(overview_df['Unique_Countries']):
-    ax2.text(i, v + max(overview_df['Unique_Countries'])*0.01, str(v), ha='center', va='bottom', fontweight='bold')
+for i, v in enumerate(country_counts):
+    ax2.text(i, v + max(country_counts)*0.01, str(v), ha='center', va='bottom', fontweight='bold')
 
 ax3.bar(overview_df['Dataset'], overview_df['Unique_Journals'], color=colors_list)
 ax3.set_title('Number of Unique Journals by Dataset', fontsize=14, fontweight='bold')
@@ -604,10 +632,9 @@ plt.close()
 # --- Figure 3: Author Analysis (2x3 grid) ---
 fig, ((ax1, ax2, ax3), (ax4, ax5, ax6)) = plt.subplots(2, 3, figsize=(18, 12))
 
-country_counts = overview_df['Unique_Countries'].values
 ax1.bar(overview_df['Dataset'], country_counts, color=colors_list)
-ax1.set_title('Unique Countries Count by Dataset', fontweight='bold')
-ax1.set_ylabel('Number of Unique Countries')
+ax1.set_title('Author ISO3 Code Count by Dataset', fontweight='bold')
+ax1.set_ylabel('Number of ISO3 Codes')
 ax1.tick_params(axis='x', rotation=45)
 for i, v in enumerate(country_counts):
     ax1.text(i, v + max(country_counts) * 0.01, str(v), ha='center', va='bottom', fontweight='bold')
@@ -795,4 +822,4 @@ plt.tight_layout()
 plt.savefig(os.path.join(OUTPUT_DIR, 'comprehensive_representativeness_heatmaps.png'), dpi=300, bbox_inches='tight')
 plt.close()
 
-print("\n🎉 ALL OUTPUTS GENERATED SUCCESSFULLY IN public/representativeness/!")
+print("\n🎉 ALL OUTPUTS GENERATED SUCCESSFULLY IN analysiswoold/representativeness/!")

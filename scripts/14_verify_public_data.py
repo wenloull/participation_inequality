@@ -8,7 +8,7 @@ def main():
     data_dir = os.path.join(public_dir, 'data')
 
     print("="*80)
-    print("VERIFYING UNIFIED PUBLIC DATASETS IN public/data/")
+    print("VERIFYING UNIFIED PUBLIC DATASETS IN public/data/ (SOURCED FROM analysiswoold)")
     print("="*80)
 
     # 1. Check macro development indicators dataset

@@ -23,11 +23,11 @@ def format_number(val):
 def generate_figure():
     # Define file paths
     pmid_cause_path = "/Users/wen/Desktop/participation_inequality/CauseClassier/pmid_cause.csv"
-    geoinfor_path = "/Users/wen/Desktop/participation_inequality/public/geoinfor183_disease_matched.csv"
+    geoinfor_path = "/Users/wen/Desktop/participation_inequality/analysiswoold/geoinfor195kwoold.csv"
     year_path = "/Users/wen/Desktop/participation_inequality/data/year_195k.csv"
     gbd_path = "/Users/wen/Desktop/participation_inequality/data/gbddisease.csv"
     c_map_path = "/Users/wen/Desktop/participation_inequality/data/country_mapping_for_figure.csv"
-    output_dir = "/Users/wen/Desktop/participation_inequality/public"
+    output_dir = "/Users/wen/Desktop/participation_inequality/analysiswoold"
     os.makedirs(output_dir, exist_ok=True)
     
     # 16 Custom diseases (excluding enteric infections)
@@ -119,6 +119,10 @@ def generate_figure():
     pbr_data['Total_Studies'] = pbr_data['Total_Studies'].fillna(0)
     pbr_data['Avg_DALYs'] = pbr_data['Avg_DALYs'].fillna(0.1)
     
+    # Filter to unified 180 countries matching strict intersection
+    unified_countries = pd.read_csv("/Users/wen/Desktop/participation_inequality/analysiswoold/unified_180_countries.csv")['ISO3'].unique()
+    pbr_data = pbr_data[pbr_data['ISO3'].isin(unified_countries)]
+    
     # Calculate PBR for each disease
     pbr_data['Corrected_PBR'] = np.nan
     pbr_data['Participant_Share'] = np.nan
@@ -164,8 +168,8 @@ def generate_figure():
     # PLOTTING
     # ----------------------------------------------------
     print("Loading world map shapefile...")
-    world_geojson = "/Users/wen/Desktop/participation_inequality/data/ne_110m_admin_0_countries.geojson"
-    world = gpd.read_file(world_geojson)
+    world_url = "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson"
+    world = gpd.read_file(world_url)
     
     # Setup subplots
     fig, axes = plt.subplots(4, 4, figsize=(24, 20))

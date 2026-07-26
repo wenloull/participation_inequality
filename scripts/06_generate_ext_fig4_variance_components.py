@@ -60,13 +60,13 @@ def load_and_prepare_data():
     print("\nLoading and preparing datasets for Extended Data Figure 4...")
 
     pmid_cause_path = "/Users/wen/Desktop/participation_inequality/CauseClassier/pmid_cause.csv"
-    geoinfor_path = "/Users/wen/Desktop/participation_inequality/public/geoinfor183_disease_matched.csv"
+    geoinfor_path = "/Users/wen/Desktop/participation_inequality/analysiswoold/geoinfor195kwoold.csv"
     year_path = "/Users/wen/Desktop/participation_inequality/data/year_195k.csv"
     gbd_path = "/Users/wen/Desktop/participation_inequality/data/gbddisease.csv"
     disease_mapping_path = "/Users/wen/Desktop/participation_inequality/data/disease_mapping.csv"
 
     # Load datasets
-    pmid_cause = pd.read_csv(pmid_cause_path)
+    pmid_cause = pd.read_csv(pmid_cause_path)[['PMID', 'cause_id']].drop_duplicates()
     year_195k = pd.read_csv(year_path).rename(columns={'PMID': 'PMID', 'YEAR': 'YEAR'})
     geoinfor = pd.read_csv(geoinfor_path).rename(columns={'pmid': 'PMID', 'iso3': 'ISO3', 'amount': 'Amount'})
     gbddisease = pd.read_csv(gbd_path)
@@ -112,6 +112,10 @@ def load_and_prepare_data():
     panel['participants'] = panel['participants'].fillna(0)
     panel['n_studies'] = panel['n_studies'].fillna(0)
     panel = panel[panel['dalys'] > 0]
+
+    # Filter to unified 180 countries matching strict intersection
+    unified_countries = pd.read_csv("/Users/wen/Desktop/participation_inequality/analysiswoold/unified_180_countries.csv")['ISO3'].unique()
+    panel = panel[panel['ISO3'].isin(unified_countries)]
 
     print(f"✓ Panel created: {len(panel)} observations")
     print(f"  - {len(panel['ISO3'].unique())} countries")
@@ -387,7 +391,7 @@ def create_combined_figure(theil_country, variance_part):
     plt.tight_layout()
     
     # Save
-    output_dir = "/Users/wen/Desktop/participation_inequality/public"
+    output_dir = "/Users/wen/Desktop/participation_inequality/analysiswoold"
     png_out = os.path.join(output_dir, "extended_data_fig4.png")
     pdf_out = os.path.join(output_dir, "extended_data_fig4.pdf")
     
@@ -408,7 +412,7 @@ def main():
     variance_part = variance_partitioning(panel_pbr)
 
     # Save CSV outputs
-    output_dir = "/Users/wen/Desktop/participation_inequality/public"
+    output_dir = "/Users/wen/Desktop/participation_inequality/analysiswoold"
     theil_country.to_csv(os.path.join(output_dir, 'rq2_theil_country_grouped.csv'), index=False)
     variance_part.to_csv(os.path.join(output_dir, 'rq2_variance_partitioning.csv'), index=False)
     print("✓ Saved CSV results.")

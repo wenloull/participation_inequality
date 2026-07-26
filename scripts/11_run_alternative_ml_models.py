@@ -9,7 +9,7 @@ from sklearn.inspection import permutation_importance
 from sklearn.linear_model import ElasticNetCV
 
 # Load prepared data
-from sensitivity_analysis import load_and_prepare_data, OUTPUT_DIR
+from analysiswoold.sensitivity_analysis import load_and_prepare_data, OUTPUT_DIR
 
 def main():
     print("="*80)

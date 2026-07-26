@@ -2,6 +2,7 @@
 Comprehensive Intervention Analysis Visualization - Revised Version
 32 Panel Layout with REAL CALCULATIONS
 """
+import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -937,11 +938,11 @@ def visualize_scatter_by_status(ax, df, target_status, panel_label):
                 print(f"\n[GRAPH] Panel B: Drawing specified annotations")
                 specified_annotations = [
                     ('TWN', 'Neurological disorders'),
-                    ('TWN', 'Musculoskeletal disorders'),
+                    ('TWN', 'Substance use disorders'),
                     ('FIN', 'Diabetes and kidney diseases'),
                     ('FRA', 'HIV/AIDS and sexually transmitted infections'),
                     ('NLD', 'Digestive diseases'),
-                    ('CRI', 'Mental disorders'),
+                    ('GBR', 'Diabetes and kidney diseases'),
                     ('GBR', 'Nutritional deficiencies')
                 ]
                 
@@ -955,9 +956,17 @@ def visualize_scatter_by_status(ax, df, target_status, panel_label):
                         
                         combo_name = f"{disease_name}-{iso3}"
                         
+                        # Custom offsets to prevent overlap (default is 1.05, 1.05)
+                        custom_offsets = {
+                            ('GBR', 'Diabetes and kidney diseases'): (0.50, 1.15),  # Left and slightly up
+                            ('GBR', 'Nutritional deficiencies'): (1.20, 0.95),      # Right and slightly down
+                        }
+                        
+                        ox, oy = custom_offsets.get((iso3, disease), (1.05, 1.05))
+                        
                         ax.annotate(combo_name,
                                     xy=(row['Residual'], row['CIS_Country']),
-                                    xytext=(row['Residual'] * 1.05, row['CIS_Country'] * 1.05),
+                                    xytext=(row['Residual'] * ox, row['CIS_Country'] * oy),
                                     arrowprops=dict(arrowstyle='->',
                                                     color='darkred',
                                                     alpha=0.8,
@@ -1263,7 +1272,11 @@ def visualize_true_waterfall_chart(ax, scenario_data, title, panel_label):
 
     # Gini
     # scenario_data
-    baseline_gini = 0.737255  # 
+    try:
+        stats_df = pd.read_csv('intervention_statistics_national_pbr_gini.csv')
+        baseline_gini = stats_df['baseline_national_pbr_gini'].iloc[0]
+    except Exception:
+        baseline_gini = 0.772451  # fallback
 
     # Gini
     gini_values.append(baseline_gini)  # 
@@ -1788,7 +1801,11 @@ def visualize_combined_waterfall_chart(ax, scenario1, scenario2, panel_label):
                  fontsize=14, fontweight='bold', pad=10)
 
     # Gini
-    baseline_gini = 0.7688
+    try:
+        stats_df = pd.read_csv('intervention_statistics_national_pbr_gini.csv')
+        baseline_gini = stats_df['baseline_national_pbr_gini'].iloc[0]
+    except Exception:
+        baseline_gini = 0.772451  # fallback
 
     # 
     steps = scenario1['Step']
@@ -1958,7 +1975,7 @@ def validate_with_figure3():
         return
 
     # Load public data
-    base_dir = r"c:/Users/dell/PycharmProjects/nlp2/participation_inequality/analysis"
+    base_dir = "../data"
     agg_file = os.path.join(base_dir, "public_aggregated_participants_70k.csv")
     gbd_file = os.path.join(base_dir, "gbddisease.csv")
     
@@ -2098,8 +2115,12 @@ def main():
     print("CREATING FINAL 23 INTERVENTION VISUALIZATION WITH REAL CALCULATIONS")
     print("=" * 80)
 
-    # 
-    df = load_and_prepare_data(r'c:/Users/dell/PycharmProjects/nlp2/participation_inequality/data/APP_visual_factor.csv')
+    # Ensure all outputs are written to the directory containing this script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    os.chdir(script_dir)
+
+    # Load updated dataset
+    df = load_and_prepare_data('APP_visual_factor_updated.csv')
 
     # 
     nodes_df, edges_df = create_network_data(df)
@@ -2107,11 +2128,11 @@ def main():
     # PBR
     fig = create_3x2_visualization(df, nodes_df, edges_df)
 
-    # 
-    try:
-        validate_with_figure3()
-    except Exception as e:
-        print(f"\n[WARN] Validation skipped: {e}")
+    # Validation is skipped because public_aggregated_participants_70k.csv is outdated/incorrect
+    # try:
+    #     validate_with_figure3()
+    # except Exception as e:
+    #     print(f"\n[WARN] Validation skipped: {e}")
 
     print("\n" + "=" * 80)
     print("VISUALIZATION COMPLETED SUCCESSFULLY!")

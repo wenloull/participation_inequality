@@ -1,5 +1,0 @@
-Block,Variables,HVP_R2_Contribution,HVP_Pct_Contribution,Shapley_R2_Contribution,Shapley_Pct_Contribution
-Economic,"log_gdp_per_capita, log_population, foreign_aid_received",0.30617530485202893,57.31049691062212,0.2830782251116973,52.987140009769504
-Research,"rd_expenditure, log_total_publications, log_total_citations, log_researchers_per_million",0.08778079536600536,16.430982257261775,0.1438764444864025,26.931076401587266
-Health,"log_health_expenditure_per_capita, uhc_index, log_medical_school, sanitation",0.13310770829804341,24.915363141001066,0.09010955747439733,16.866884537764353
-Governance,"hdi, democracy_index, altruism, trust_scientists",0.00717567876235381,1.3431576911150402,0.01717526020593438,3.214899050878859

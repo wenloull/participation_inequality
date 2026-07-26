@@ -19,8 +19,8 @@ def format_number(val):
 
 def generate_figure():
     # Define file paths
-    csv_path = "/Users/wen/Desktop/participation_inequality/public/geoinfor183_disease_matched.csv"
-    output_dir = "/Users/wen/Desktop/participation_inequality/public"
+    csv_path = "/Users/wen/Desktop/participation_inequality/analysiswoold/geoinfor195kwoold.csv"
+    output_dir = "/Users/wen/Desktop/participation_inequality/analysiswoold"
     os.makedirs(output_dir, exist_ok=True)
     
     # Read the data

@@ -95,7 +95,7 @@ def load_and_prepare_temporal_pbr_data():
     print("\nLoading and preparing datasets...")
     
     pmid_cause_path = "/Users/wen/Desktop/participation_inequality/CauseClassier/pmid_cause.csv"
-    geoinfor_path = "/Users/wen/Desktop/participation_inequality/public/geoinfor183_disease_matched.csv"
+    geoinfor_path = "/Users/wen/Desktop/participation_inequality/analysiswoold/geoinfor195kwoold.csv"
     year_path = "/Users/wen/Desktop/participation_inequality/data/year_195k.csv"
     gbd_path = "/Users/wen/Desktop/participation_inequality/data/gbddisease.csv"
 
@@ -109,7 +109,10 @@ def load_and_prepare_temporal_pbr_data():
     df_year_filtered = df_year[(df_year['YEAR'] >= 2000) & (df_year['YEAR'] <= 2024)].copy()
 
     # Filter causes to Level 2 and custom diseases (16 diseases)
-    df_cause_filtered = df_cause[(df_cause['Level'] == 2) & (df_cause['Cause'].isin(custom_diseases))].copy()
+    df_cause_filtered = df_cause[
+        (df_cause['Level'] == 2) &
+        (df_cause['Cause'].isin(custom_diseases))
+    ][['PMID', 'Cause', 'cause_id']].drop_duplicates().copy()
 
     # Merge trial data
     merged_trials = df_geo.merge(df_year_filtered, on='PMID', how='inner')
@@ -132,6 +135,10 @@ def load_and_prepare_temporal_pbr_data():
 
     # Merge GBD DALYs into aggregated_trials
     temporal_pbr_data = aggregated_trials.merge(gbd_agg, on=['ISO3', 'cause_id', 'YEAR'], how='inner')
+
+    # Filter to unified 180 countries matching strict intersection
+    unified_countries = pd.read_csv("/Users/wen/Desktop/participation_inequality/analysiswoold/unified_180_countries.csv")['ISO3'].unique()
+    temporal_pbr_data = temporal_pbr_data[temporal_pbr_data['ISO3'].isin(unified_countries)]
 
     print("Calculating PBR using adjusted formula...")
     temporal_pbr_data['PBR'] = np.nan
@@ -502,7 +509,17 @@ def generate_and_save_figure2(include_panel_c=False):
     ax1.set_xlabel('Contribution to Inequality Score (CIS) with 95% CI', fontsize=12, fontweight='bold')
     ax1.set_title('A. Disease Contribution to Global Inequality', fontsize=14, fontweight='bold', pad=15)
     ax1.set_yticks(y_pos)
-    ax1.set_yticklabels([d[:35] + '...' if len(d) > 35 else d for d in ci_results['Disease']], fontsize=10)
+    labels = []
+    for d in ci_results['Disease']:
+        if d == 'HIV/AIDS and sexually transmitted infections':
+            labels.append('HIV/AIDS and\nsexually transmitted infections')
+        elif d == 'Neglected tropical diseases and malaria':
+            labels.append('Neglected tropical\ndiseases and malaria')
+        elif d == 'Respiratory infections and tuberculosis':
+            labels.append('Respiratory infections\nand tuberculosis')
+        else:
+            labels.append(d)
+    ax1.set_yticklabels(labels, fontsize=10)
     ax1.grid(axis='x', alpha=0.3)
 
     # ========================================================================
@@ -671,7 +688,7 @@ def generate_and_save_figure2(include_panel_c=False):
 
     # Save
     plt.tight_layout()
-    output_dir = "/Users/wen/Desktop/participation_inequality/public"
+    output_dir = "/Users/wen/Desktop/participation_inequality/analysiswoold"
     
     if include_panel_c:
         png_out = os.path.join(output_dir, "figure2_supplementary_5panels.png")

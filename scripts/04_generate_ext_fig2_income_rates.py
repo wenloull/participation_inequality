@@ -19,26 +19,25 @@ def format_number(val):
 
 def generate_figure():
     # Define file paths
-    csv_path = "/Users/wen/Desktop/participation_inequality/public/geoinfor183_disease_matched.csv"
+    csv_path = "/Users/wen/Desktop/participation_inequality/analysiswoold/geoinfor195kwoold.csv"
     year_path = "/Users/wen/Desktop/participation_inequality/data/year_195k.csv"
     all_about_path = "/Users/wen/Desktop/participation_inequality/data/AllAboutCountry.csv"
-    app_path = "/Users/wen/Desktop/participation_inequality/public/APP_visual_factor_updated.csv"
-    output_dir = "/Users/wen/Desktop/participation_inequality/public"
+    output_dir = "/Users/wen/Desktop/participation_inequality/analysiswoold"
     os.makedirs(output_dir, exist_ok=True)
     
     # Read the data
     print("Reading data files...")
     df_geo = pd.read_csv(csv_path).rename(columns={'PMID': 'pmid', 'Amount': 'amount', 'ISO3': 'iso3'})
-    app_df = pd.read_csv(app_path)
-    iso175_set = set(app_df['ISO3'].unique())
-    df_geo = df_geo[df_geo['iso3'].isin(iso175_set)].copy()
-    
     df_year = pd.read_csv(year_path).rename(columns={'PMID': 'pmid'})
     df_all = pd.read_csv(all_about_path)
     
     # Merge geographic data with publication year
     df = df_geo.merge(df_year, on='pmid', how='inner')
     df['YEAR'] = df['YEAR'].astype(int)
+    
+    # Filter to unified 180 countries matching strict intersection
+    #unified_countries = pd.read_csv("/Users/wen/Desktop/participation_inequality/analysiswoold/unified_180_countries.csv")['ISO3'].unique()
+    #df = df[df['iso3'].isin(unified_countries)]
     
     # Clean income classifications
     income_df = df_all[df_all['Type'] == 'Income'].copy()
@@ -222,20 +221,6 @@ def generate_figure():
     plt.savefig(png_out, dpi=300, bbox_inches='tight')
     plt.savefig(pdf_out, bbox_inches='tight')
     print(f"Figures successfully saved to:\n  - {png_out}\n  - {pdf_out}")
-
-    # Calculate and output annual participants by income group
-    yearly_pivot = yearly_sums.pivot(index='YEAR', columns='Income_Group', values='amount').fillna(0)
-    yearly_pivot.columns.name = None
-    csv_annual_out = os.path.join(output_dir, "annual_participants_by_income.csv")
-    yearly_pivot.to_csv(csv_annual_out)
-    
-    print("\n" + "="*80)
-    print("ANNUAL TOTAL PARTICIPANTS RECIPENTS BY INCOME GROUP (2000-2024)")
-    print("="*80)
-    print(yearly_pivot.to_string())
-    print(f"\nSaved annual participants data to: {csv_annual_out}")
-    print("="*80)
-
 
 if __name__ == '__main__':
     generate_figure()

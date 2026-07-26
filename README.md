@@ -99,4 +99,7 @@ python scripts/14_verify_public_data.py
 ---
 
 ## 📜 License
-This repository is released under the **MIT License**.
+Data Availability
+The aggregated data supporting the findings of this study, including country-level enrollment aggregates, participation-to-burden ratios across country-disease panels, and macro-development indicators, are available in the public GitHub repository (https://github.com/wenloull/participation_inequality) and deposited on Zenodo (DOI: 10.5281/zenodo.18115242). Source data for all main text and Extended Data figures are provided in spreadsheet format within the source_data/ folder of the repository. Per-study raw extraction databases (geoinfor) contain proprietary structural annotations and are available from the corresponding author upon reasonable request.
+Code Availability
+All custom Python code used for statistical analysis, variance decomposition, econometric regression modeling, and figure generation is available in the public repository at https://github.com/wenloull/participation_inequality under an MIT License. A snapshot of the code used for the published manuscript has been archived with a permanent DOI on Zenodo: 10.5281/zenodo.18115265.

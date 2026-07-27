@@ -467,7 +467,7 @@ def generate_and_save_figure2(include_panel_c=False):
     print("="*80)
 
     temporal_pbr_data = load_and_prepare_temporal_pbr_data()
-    ci_results = calculate_disease_cis_bootstrap(temporal_pbr_data, n_bootstrap=200)
+    ci_results = calculate_disease_cis_bootstrap(temporal_pbr_data, n_bootstrap=1000)
 
     # Sort and identify top 3 driver diseases (top 20% of 16 diseases is ~3 diseases)
     ci_results_sorted = ci_results.sort_values('CIS_Mean', ascending=False)
@@ -480,7 +480,7 @@ def generate_and_save_figure2(include_panel_c=False):
 
     disease_lorenz = calculate_disease_lorenz_curves(temporal_pbr_data, top_3_diseases)
     temporal_reduction = calculate_temporal_inequality_reduction(temporal_pbr_data, top_3_diseases)
-    temporal_theil = calculate_temporal_theil_trends(temporal_pbr_data, n_bootstrap=100)
+    temporal_theil = calculate_temporal_theil_trends(temporal_pbr_data, n_bootstrap=1000)
     country_lorenz = calculate_country_lorenz_curves(temporal_pbr_data)
 
     # Set up gridspec
